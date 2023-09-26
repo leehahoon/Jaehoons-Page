@@ -7,7 +7,6 @@ const AppContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${(props) => (props.$ismobile ? "0" : "0 5%")};
   min-width: 320px;
 `;
 

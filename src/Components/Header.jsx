@@ -8,6 +8,15 @@ const HeaderContainer = styled.header`
   width: 100%;
   height: 160px;
   margin-bottom: 30px;
+  padding: ${(props) => (props.$ismobile ? "0" : "0 5%")};
+  @font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+      format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  font-family: "Pretendard-Regular";
 `;
 
 const ProfileContainer = styled.div`
@@ -19,7 +28,6 @@ const ProfileContainer = styled.div`
   .profileImg {
     width: ${(props) => (props.$ismobile ? "80px" : "100px")};
     margin-right: ${(props) => (props.$ismobile ? "" : "30px")};
-    margin-left: ${(props) => (props.$ismobile ? "20px" : "")};
   }
 
   .profileContents {

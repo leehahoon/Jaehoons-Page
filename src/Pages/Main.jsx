@@ -19,6 +19,7 @@ const MainContainer = styled.main`
 
 const ContentsContainer = styled.div`
   width: 100%;
+  padding: ${(props) => (props.$ismobile ? "0" : "0 5%")};
   display: flex;
 `;
 

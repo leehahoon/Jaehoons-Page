@@ -4,6 +4,14 @@ import { useMediaQuery } from "react-responsive";
 const AwardsContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
   margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
+  @font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+      format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  font-family: "Pretendard-Regular";
 
   .title {
     border-bottom: 1px solid rgb(236, 236, 235);
