@@ -6,7 +6,8 @@ const HeaderContainer = styled.header`
   width: 100%;
   height: 100px;
   border: 1px solid black;
-  padding: 20px 0;
+  padding: 5px 0;
+  margin-bottom: 50px;
 `;
 
 const ProfileContainer = styled.div`
@@ -14,15 +15,14 @@ const ProfileContainer = styled.div`
   flex-direction: row;
   align-items: center;
   height: 100%;
-  border: 1px solid black;
 
   .profileImg {
-    width: 100px;
+    width: ${(props) => (props.$ismobile ? "80px" : "100px")};
     margin-right: ${(props) => (props.$ismobile ? "" : "30px")};
+    margin-left: ${(props) => (props.$ismobile ? "20px" : "")};
   }
 
   .profileContents {
-    border: 1px solid black;
     width: 100%;
     display: flex;
     align-items: center;
@@ -33,10 +33,10 @@ const ProfileContainer = styled.div`
     .name {
       font-size: ${(props) => (props.$ismobile ? "1.3rem" : "2rem")};
       width: 90%;
+      color: #454545;
     }
 
     .linkContainer {
-      border: 1px solid black;
       display: flex;
       align-items: center;
       width: 100%;
@@ -45,6 +45,11 @@ const ProfileContainer = styled.div`
       .link {
         display: flex;
         align-items: center;
+
+        a {
+          text-decoration: none;
+          color: #454545;
+        }
 
         .icon {
           width: ${(props) => (props.$ismobile ? "20px" : "35px")};
@@ -72,15 +77,15 @@ function Header() {
           <div className="linkContainer">
             <div className="github link">
               <div className="icon"></div>
-              <a href="https://naver.com">깃허브</a>
+              <a href="https://naver.com">Github</a>
             </div>
             <div className="blog link">
               <div className="icon"></div>
-              <a href="https://naver.com">블로그</a>
+              <a href="https://naver.com">Blog</a>
             </div>
             <div className="youtube link">
               <div className="icon"></div>
-              <a href="https://naver.com">유튜브</a>
+              <a href="https://naver.com">Youtube</a>
             </div>
           </div>
         </div>

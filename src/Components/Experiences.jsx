@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
-const ProjectsContainer = styled.section`
+const ExperiencesContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
   margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
 
@@ -15,7 +15,7 @@ const ProjectsContainer = styled.section`
   }
 
   .heightBox {
-    height: 520px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,59 +52,36 @@ const ProjectsContainer = styled.section`
   }
 `;
 
-function Projects() {
+function Experiences() {
   const isMobile = useMediaQuery({
     query: "(max-width:767px)",
   });
 
-  const projectsValue = [
+  const experiencesValue = [
     {
       id: 1,
-      period: "2023",
-      title: "보안 취약점 분석 및 제보",
+      period: "2022.10 ~ 2024.01",
+      title: "STEALIEN",
       contents: [
-        "KISA, 파인더갭 등 버그바운티 참여",
-        "약 55개 취약점 제보",
-        "SQL Injection, Buffer Overflow, Command Injection 등",
+        "보안 취약점 분석 및 연구",
+        "모의해킹 업무 및 보안기술 연구개발 수행",
       ],
     },
     {
       id: 2,
-      period: "2022",
-      title: "Static Program Analysis for Black-Box",
-      contents: [
-        "Black-box 프로그램을 대상으로 취약점 발견 기술 연구 및 개발",
-        "TaintAnalysis 구현 및 FSB 탐지 패턴 제작",
-        "https://github.com/mongddangdda/binary-magician-legacy",
-      ],
-    },
-    {
-      id: 3,
-      period: "2021",
-      title: "보안 취약점 분석 및 제보",
-      contents: [
-        "권한 상승 사례 분석 및 취약점 메커니즘 연구",
-        "“권한 상승 취약점 점검 가이드” 제작",
-        "권한 상승 취약점 3건 제보",
-      ],
-    },
-    {
-      id: 4,
-      period: "2016",
-      title: "스마트팜 보안 가이드라인 구축",
-      contents: [
-        "스마트팜 보안 취약점 분석",
-        "원격에서 농장을 조종할 수 있는 취약점 발견",
-      ],
+      period: "2019.04 ~ 2020.11",
+      title: "육군 3군단",
+      contents: ["정보보호병", "컴퓨터 정보보호 관련 임무 수행"],
     },
   ];
+
   return (
-    <ProjectsContainer $ismobile={isMobile}>
-      <div className="title">PROJECTS</div>
+    <ExperiencesContainer $ismobile={isMobile}>
+      <div className="title">WORK EXPERIENCES</div>
       <ul className="heightBox">
-        {projectsValue.map((el) => {
+        {experiencesValue.map((el) => {
           return (
-            <li key={el.id} className="listContainer">
+            <li className="listContainer" key={el.id}>
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
                 <div className="educationTitle">
@@ -124,8 +101,8 @@ function Projects() {
           );
         })}
       </ul>
-    </ProjectsContainer>
+    </ExperiencesContainer>
   );
 }
 
-export default Projects;
+export default Experiences;
