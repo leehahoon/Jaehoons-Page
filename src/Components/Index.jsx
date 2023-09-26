@@ -1,17 +1,13 @@
 import styled from "styled-components";
-import Experiences from "./Experiences";
 
-const IndexContainer = styled.ul`
+const IndexContainer = styled.nav`
   width: 30%;
-  height: 300px;
-  border: 1px solid black;
-  list-style: none;
-  padding: 0;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: sticky;
-  top: 0;
+  top: 30px;
 
   .title {
     font-size: 1.5rem;
@@ -19,11 +15,12 @@ const IndexContainer = styled.ul`
   }
 
   .listContainer {
-    border: 1px solid black;
-    height: 250px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    list-style: none;
+    padding: 0;
 
     .list {
       font-size: 1.3rem;
@@ -61,7 +58,7 @@ function Index({
   return (
     <IndexContainer>
       <span className="title">INDEX</span>
-      <div className="listContainer">
+      <ul className="listContainer">
         {indexValue.map((el) => {
           return (
             <li
@@ -75,7 +72,7 @@ function Index({
             </li>
           );
         })}
-      </div>
+      </ul>
     </IndexContainer>
   );
 }
