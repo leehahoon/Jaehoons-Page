@@ -38,11 +38,11 @@ const ProjectsContainer = styled.section`
       flex-direction: column;
       width: 100%;
 
-      .educationTitle {
-        margin-bottom: 2px;
+      .projectsTitle {
+        margin-bottom: 5px;
       }
 
-      .educationContents {
+      .projectsContents {
         .contents {
           margin-bottom: 2px;
           word-break: keep-all;
@@ -116,10 +116,10 @@ function Projects() {
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
-                <div className="educationTitle">
+                <div className="projectsTitle">
                   <b>{el.title}</b>
                 </div>
-                <div className="educationContents">
+                <div className="projectsContents">
                   {el.contents.map((el, i) => {
                     return index === 1 && i === 2 ? (
                       <a key={i} className="link" href="el">

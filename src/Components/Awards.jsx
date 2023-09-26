@@ -46,11 +46,11 @@ const AwardsContainer = styled.section`
       flex-direction: column;
       width: 100%;
 
-      .educationTitle {
-        margin-bottom: 2px;
+      .wardsTitle {
+        margin-bottom: 5px;
       }
 
-      .educationContents {
+      .wardsContents {
         .contents {
           margin-bottom: 2px;
           word-break: keep-all;
@@ -138,10 +138,10 @@ function Awards() {
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
-                <div className="educationTitle">
+                <div className="awardsTitle">
                   <b>{el.title}</b>
                 </div>
-                <div className="educationContents">
+                <div className="wardsContents">
                   {el.contents.map((el, i) => {
                     return index === 1 && i === 2 ? (
                       <a key={i} className="link" href="el">

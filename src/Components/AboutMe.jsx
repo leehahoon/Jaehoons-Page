@@ -45,9 +45,15 @@ function AboutMe() {
     <AboutMeContainer $ismobile={isMobile}>
       <div className="title">ABOUT ME</div>
       <div className="contents">
-        <p className="information">이메일 : 이메일입니다</p>
-        <p className="information">정보2 : 뭐가 들어갈지 모르겠습니다.</p>
-        <p className="information">정보3 : 뭐가 들어갈지 모르겠습니다.</p>
+        <p className="information">
+          <b>이메일</b> : leehahoon1001@gmail.com
+        </p>
+        <p className="information">
+          <b>정보2</b> : ?????????
+        </p>
+        <p className="information">
+          <b>정보3 </b>: ?????????
+        </p>
       </div>
     </AboutMeContainer>
   );

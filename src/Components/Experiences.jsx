@@ -41,13 +41,13 @@ const ExperiencesContainer = styled.section`
       display: flex;
     }
 
-    .contentsContainer {
+    .experiencesContainer {
       display: flex;
       flex-direction: column;
       width: 100%;
 
-      .educationTitle {
-        margin-bottom: 2px;
+      .experiencesTitle {
+        margin-bottom: 5px;
       }
 
       .educationContents {
@@ -92,10 +92,10 @@ function Experiences() {
             <li className="listContainer" key={el.id}>
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
-                <div className="educationTitle">
+                <div className="experiencesTitle">
                   <b>{el.title}</b>
                 </div>
-                <div className="educationContents">
+                <div className="experiencesContents">
                   {el.contents.map((el, i) => {
                     return (
                       <div className="contents" key={i}>

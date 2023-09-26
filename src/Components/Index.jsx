@@ -33,6 +33,10 @@ const IndexContainer = styled.nav`
     .list {
       font-size: 1.3rem;
       cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `;

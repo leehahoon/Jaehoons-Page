@@ -46,11 +46,11 @@ const TalksContainer = styled.section`
       flex-direction: column;
       width: 100%;
 
-      .educationTitle {
-        margin-bottom: 2px;
+      .talksTitle {
+        margin-bottom: 5px;
       }
 
-      .educationContents {
+      .talksContents {
         list-style-type: none;
         padding: 0;
         .contents {
@@ -102,10 +102,10 @@ function Talks() {
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
-                <div className="educationTitle">
+                <div className="talksTitle">
                   <b>{el.title}</b>
                 </div>
-                <ul className="educationContents">
+                <ul className="talksContents">
                   {el.contents.map((el, i) => {
                     return (
                       <li className="contents" key={i}>

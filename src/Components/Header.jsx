@@ -50,13 +50,17 @@ const ProfileContainer = styled.div`
       width: 100%;
       justify-content: space-evenly;
 
+      a {
+        text-decoration: none;
+        color: #454545;
+      }
+
       .link {
         display: flex;
         align-items: center;
 
-        a {
-          text-decoration: none;
-          color: #454545;
+        &:hover {
+          text-decoration: underline;
         }
 
         .icon {
@@ -81,18 +85,24 @@ function Header() {
         <div className="profileContents">
           <h1 className="name">Jang Jaehoon</h1>
           <div className="linkContainer">
-            <div className="github link">
-              <img src={GithubLogo} className="icon" alt="GithubLogo" />
-              <a href="https://naver.com">Github</a>
-            </div>
-            <div className="blog link">
-              <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
-              <a href="https://naver.com">Blog</a>
-            </div>
-            <div className="youtube link">
-              <div className="icon"></div>
-              <a href="https://naver.com">Youtube</a>
-            </div>
+            <a target="_blank" href="https://github.com/leehahoon">
+              <div className="github link">
+                <img src={GithubLogo} className="icon" alt="GithubLogo" />
+                Github
+              </div>
+            </a>
+            <a target="_blank" href="https://leehahoon.tistory.com">
+              <div className="blog link">
+                <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
+                Blog
+              </div>
+            </a>
+            <a target="_blank" href="https://naver.com">
+              <div className="youtube link">
+                <div className="icon"></div>
+                Youtube
+              </div>
+            </a>
           </div>
         </div>
       </ProfileContainer>

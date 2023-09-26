@@ -47,7 +47,7 @@ const BugBountyContainer = styled.section`
       width: 100%;
 
       .educationTitle {
-        margin-bottom: 2px;
+        margin-bottom: 5px;
       }
 
       .educationContents {
