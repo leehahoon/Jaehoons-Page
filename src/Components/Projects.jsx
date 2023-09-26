@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const ProjectsContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
+  margin-bottom: 80px;
 
   .title {
     border-bottom: 1px solid rgb(236, 236, 235);

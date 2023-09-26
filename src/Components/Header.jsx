@@ -99,7 +99,7 @@ function Header() {
             </a>
             <a target="_blank" href="https://naver.com">
               <div className="youtube link">
-                <div className="icon"></div>
+                <img src={GithubLogo} className="icon" alt="GithubLogo" />
                 Youtube
               </div>
             </a>

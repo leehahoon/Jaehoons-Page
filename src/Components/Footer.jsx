@@ -23,10 +23,9 @@ const FooterContainer = styled.footer`
   .linkContainer {
     display: flex;
     justify-content: space-between;
+    height: 80%;
     width: 30%;
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
+    margin-left: ${(props) => (props.$ismobile ? "30px" : "")};
     flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
 
     a {
@@ -51,7 +50,7 @@ const FooterContainer = styled.footer`
   .copyrightContainer {
     color: #454545;
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     right: 30px;
   }
 `;

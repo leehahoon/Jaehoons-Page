@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const TalksContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
+  margin-bottom: 80px;
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -23,7 +23,7 @@ const TalksContainer = styled.section`
   }
 
   .heightBox {
-    height: 300px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
