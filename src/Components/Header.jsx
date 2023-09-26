@@ -83,7 +83,7 @@ function Header() {
       <ProfileContainer $ismobile={isMobile}>
         <img className="profileImg" src={ProfileImg} alt="profileImg" />
         <div className="profileContents">
-          <h1 className="name">Jang Jaehoon</h1>
+          <h1 className="name">Jang JaeHoon</h1>
           <div className="linkContainer">
             <a target="_blank" href="https://github.com/leehahoon">
               <div className="github link">

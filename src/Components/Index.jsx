@@ -8,6 +8,9 @@ const IndexContainer = styled.nav`
   justify-content: center;
   position: sticky;
   top: 30px;
+  border-left: 2px solid #5d5d5d;
+  padding-left: 30px;
+
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
