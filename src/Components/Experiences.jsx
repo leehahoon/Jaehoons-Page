@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const ExperiencesContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
+  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -23,7 +23,7 @@ const ExperiencesContainer = styled.section`
   }
 
   .heightBox {
-    height: 190px;
+    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -69,18 +69,15 @@ function Experiences() {
     {
       id: 1,
       period: "2022.10 ~ 2024.01",
-      title: "STEALIEN",
-      contents: [
-        "보안 취약점 분석 및 연구",
-        "모의해킹 업무 및 보안기술 연구개발 수행",
-      ],
+      title: "Security Researcher at STEALIEN",
+      contents: ["Penetration Testing and Security Researching"],
     },
-    {
-      id: 2,
-      period: "2019.04 ~ 2020.11",
-      title: "육군 3군단",
-      contents: ["정보보호병", "컴퓨터 정보보호 관련 임무 수행"],
-    },
+    // {
+    //   id: 2,
+    //   period: "2019.04 ~ 2020.11",
+    //   title: "육군 3군단",
+    //   contents: ["정보보호병", "컴퓨터 정보보호 관련 임무 수행"],
+    // },
   ];
 
   return (

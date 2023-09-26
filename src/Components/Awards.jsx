@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const AwardsContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
+  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -23,7 +23,7 @@ const AwardsContainer = styled.section`
   }
 
   .heightBox {
-    height: 730px;
+    height: 680px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -78,20 +78,20 @@ function Awards() {
     {
       id: 1,
       period: "2023",
-      title: "SSUCTF",
-      contents: ["- Advanced 2위", "- 숭실대학교 해킹방어대회"],
+      title: "SSUCTF, 2nd Prize",
+      contents: ["- 숭실대학교 해킹방어대회"],
     },
     {
       id: 2,
       period: "2023",
-      title: "HackingZone X-MAS Capture The Bug",
-      contents: ["- 2위", "- 웹사이트, 모바일앱 서비스 취약점 찾기 대회"],
+      title: "HackingZone X-MAS Capture The Bug, 2nd Prize",
+      contents: ["- 웹사이트, 모바일앱 서비스 취약점 찾기 대회"],
     },
     {
       id: 3,
       period: "2021",
-      title: "Metasploit Community CTF",
-      contents: ["- 4위, PoSTLTimes 팀", "- RAPID7 주최 해킹대회"],
+      title: "Metasploit Community CTF, 4th Prize",
+      contents: [" PoSTLTimes 팀", "- RAPID7 주최 해킹대회"],
     },
     {
       id: 4,
@@ -106,26 +106,21 @@ function Awards() {
     {
       id: 5,
       period: "2021",
-      title: "Hack The GRU",
-      contents: [
-        "- 우수상",
-        "- “블록체인 안전자산 보관서비스” 버그바운티 대회",
-      ],
+      title: "Hack The GRU, 2nd Prize",
+      contents: ["- “블록체인 안전자산 보관서비스” 버그바운티 대회"],
     },
     {
       id: 6,
       period: "2016",
-      title: "화이트햇 콘테스트 기술공모전",
-      contents: [
-        "- 최우수상",
-        "- 사이버 보안분야 발전에 기여할 정책 또는 기술 제언",
-      ],
+      title: "WhiteHat Contest, 2nd Prize",
+      contents: ["- 사이버 보안분야 발전에 기여할 정책 또는 기술 제언"],
     },
     {
       id: 7,
       period: "2016",
-      title: "소프트웨어 보안경진대회",
-      contents: ["- 최우수상", "- 안전한 소프트웨어 개발 및 취약점 점검 대회"],
+      title:
+        "Software Contest, Application Security Section 2nd Prize, Minister of the Interior Award",
+      contents: ["- 안전한 소프트웨어 개발 및 취약점 점검 대회"],
     },
   ];
 

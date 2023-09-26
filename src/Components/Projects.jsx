@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const ProjectsContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
+  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
 
   .title {
     border-bottom: 1px solid rgb(236, 236, 235);
@@ -80,7 +80,7 @@ function Projects() {
     {
       id: 2,
       period: "2022",
-      title: "Static Program Analysis for Black-Box",
+      title: "Static Program Analysis for Black Box",
       contents: [
         "- Black-box 프로그램을 대상으로 취약점 발견 기술 연구 및 개발",
         "- TaintAnalysis 구현 및 FSB 탐지 패턴 제작",
@@ -90,7 +90,7 @@ function Projects() {
     {
       id: 3,
       period: "2021",
-      title: "보안 취약점 분석 및 제보",
+      title: "Privilege Escalation Vulnerability Analysis",
       contents: [
         "- 권한 상승 사례 분석 및 취약점 메커니즘 연구",
         "- “권한 상승 취약점 점검 가이드” 제작",
@@ -100,7 +100,7 @@ function Projects() {
     {
       id: 4,
       period: "2016",
-      title: "스마트팜 보안 가이드라인 구축",
+      title: "Smart Farm Security Guidelines",
       contents: [
         "- 스마트팜 보안 취약점 분석",
         "- 원격에서 농장을 조종할 수 있는 취약점 발견",

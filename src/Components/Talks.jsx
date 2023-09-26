@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const TalksContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
+  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -70,7 +70,8 @@ function Talks() {
     {
       id: 1,
       period: "2022.06",
-      title: "Stealien Security Seminar",
+      title:
+        "Methodology of Privilege Escalation Vulnerability Analysis, Stealien Security Seminar",
       contents: [
         "- “권한 상승 취약점 분석 방법론”",
         "- 관리적, 기술적 측면의 권한 상승 취약점 소개",
@@ -79,13 +80,13 @@ function Talks() {
     {
       id: 2,
       period: "2021.08",
-      title: "제23회 해킹캠프",
+      title: "KakaoTalk Hooking, 23th HackingCamp ",
       contents: ["- “카카오톡 후킹”", "- 카카오톡 분석 및 채팅 처리구문 후킹"],
     },
     {
       id: 3,
       period: "2016.05",
-      title: "CODEGATE Junior Session",
+      title: "The Importance of Hardware Security, Codegate Junior Session",
       contents: [
         "- “로우레벨 해킹사례로 본 하드웨어 보안의 중요성”",
         "- Rowhammer 취약점, IoT 장비 등 하드웨어 해킹 사례 분석",
@@ -95,7 +96,7 @@ function Talks() {
 
   return (
     <TalksContainer $ismobile={isMobile}>
-      <div className="title">TALKS</div>
+      <div className="title">PRESENTATIONS</div>
       <ul className="heightBox">
         {talksValue.map((el) => {
           return (

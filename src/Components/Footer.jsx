@@ -62,26 +62,26 @@ function Footer() {
   });
   return (
     <FooterContainer $ismobile={isMobile}>
-      {/* <div className="linkContainer">
+      <div className="linkContainer">
         <a href="https://naver.com">
-          Github
           <div className="github link">
             <img src={GithubLogo} className="icon" alt="GithubLogo" />
+            Github
           </div>
         </a>
         <a href="https://naver.com">
-          Blog
           <div className="blog link">
             <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
+            Blog
           </div>
         </a>
         <a href="https://naver.com">
-          Youtube
           <div className="youtube link">
             <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
+            Youtube
           </div>
         </a>
-      </div> */}
+      </div>
       <div className="copyrightContainer">
         {isMobile ? (
           <span>ⓒ Jieun.</span>

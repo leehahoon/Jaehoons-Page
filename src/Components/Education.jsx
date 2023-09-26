@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const EducationContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
+  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -23,7 +23,7 @@ const EducationContainer = styled.section`
   }
 
   .heightBox {
-    height: 360px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,7 +68,7 @@ function Education() {
     {
       id: 1,
       period: "2018.03 ~ 2024.02",
-      title: "숭실대학교",
+      title: "B.S. Computer Science & Engineering at Soongsil University",
       contents: [
         "전공 : 컴퓨터학부",
         "전체 평점 : 3.89/4.5 취득학점 : 127/133",
@@ -77,13 +77,14 @@ function Education() {
     {
       id: 2,
       period: "2015.03 ~ 2018.02",
-      title: "선린인터넷고등학교",
+      title:
+        "Department of Information and Communication Technology at Sunrin Internet High School",
       contents: ["전공 : 정보통신과"],
     },
     {
       id: 3,
       period: "2016.03 ~ 2017.02",
-      title: "KITRI 차세대 보안리더 양성 프로그램",
+      title: "KITRI BoB, 5th Security Consulting Track",
       contents: ["Best of the Best 5th 보안컨설팅 트랙 수료"],
     },
     {

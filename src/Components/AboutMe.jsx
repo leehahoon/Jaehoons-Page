@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const AboutMeContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "60px")};
+  margin-bottom: ${(props) => (props.$ismobile ? "40px" : "80px")};
 
   @font-face {
     font-family: "Pretendard-Regular";
@@ -33,6 +33,10 @@ const AboutMeContainer = styled.section`
       font-size: ${(props) => (props.$ismobile ? "1rem" : "1.2rem")};
       margin: 0;
     }
+
+    .text {
+      font-size: ${(props) => (props.$ismobile ? "1rem" : "1.3rem")};
+    }
   }
 `;
 
@@ -45,14 +49,12 @@ function AboutMe() {
     <AboutMeContainer $ismobile={isMobile}>
       <div className="title">ABOUT ME</div>
       <div className="contents">
-        <p className="information">
-          <b>이메일</b> : leehahoon1001@gmail.com
+        <p className="text">
+          I'm interested in program analysis and finding bugs easily.
+          <br /> I'll make awe-some program analyzer. Just wait and see.
         </p>
         <p className="information">
-          <b>정보2</b> : ?????????
-        </p>
-        <p className="information">
-          <b>정보3 </b>: ?????????
+          <b>Email</b> : leehahoon1001@gmail.com
         </p>
       </div>
     </AboutMeContainer>
