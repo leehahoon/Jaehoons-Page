@@ -31,6 +31,7 @@ function Main() {
     query: "(max-width:767px)",
   });
 
+  const topRef = useRef(null);
   const aboutMeRef = useRef(null);
   const educationRef = useRef(null);
   const experiencesRef = useRef(null);
@@ -41,12 +42,14 @@ function Main() {
 
   return (
     <MainContainer $ismobile={isMobile}>
+      <div ref={topRef} />
       <Header />
       <ContentsContainer>
         {isMobile ? (
           " "
         ) : (
           <Index
+            topRef={topRef}
             aboutMeRef={aboutMeRef}
             educationRef={educationRef}
             experiencesRef={experiencesRef}
