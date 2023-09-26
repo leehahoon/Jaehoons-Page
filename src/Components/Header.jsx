@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import ProfileImg from "../Image/profileImg.png";
+import TstoryLogo from "../Image/tstory_logo.png";
+import GithubLogo from "../Image/github.png";
 import { useMediaQuery } from "react-responsive";
 
 const HeaderContainer = styled.header`
   width: 100%;
-  height: 100px;
-  border: 1px solid black;
-  padding: 5px 0;
-  margin-bottom: 50px;
+  height: 160px;
+  margin-bottom: 30px;
 `;
 
 const ProfileContainer = styled.div`
@@ -54,9 +54,7 @@ const ProfileContainer = styled.div`
         .icon {
           width: ${(props) => (props.$ismobile ? "20px" : "35px")};
           height: ${(props) => (props.$ismobile ? "20px" : "35px")};
-          border-radius: 50%;
-          background-color: green;
-          margin-right: 5px;
+          margin-right: 10px;
         }
       }
     }
@@ -76,11 +74,11 @@ function Header() {
           <h1 className="name">Jang Jaehoon</h1>
           <div className="linkContainer">
             <div className="github link">
-              <div className="icon"></div>
+              <img src={GithubLogo} className="icon" alt="GithubLogo" />
               <a href="https://naver.com">Github</a>
             </div>
             <div className="blog link">
-              <div className="icon"></div>
+              <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
               <a href="https://naver.com">Blog</a>
             </div>
             <div className="youtube link">

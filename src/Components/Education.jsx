@@ -15,7 +15,7 @@ const EducationContainer = styled.section`
   }
 
   .heightBox {
-    height: 320px;
+    height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

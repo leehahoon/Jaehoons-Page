@@ -47,6 +47,15 @@ const ProjectsContainer = styled.section`
           margin-bottom: 2px;
           word-break: keep-all;
         }
+
+        .link {
+          text-decoration: none;
+
+          .linkText {
+            color: black;
+            text-decoration-line: underline;
+          }
+        }
       }
     }
   }
@@ -63,9 +72,9 @@ function Projects() {
       period: "2023",
       title: "보안 취약점 분석 및 제보",
       contents: [
-        "KISA, 파인더갭 등 버그바운티 참여",
-        "약 55개 취약점 제보",
-        "SQL Injection, Buffer Overflow, Command Injection 등",
+        "- KISA, 파인더갭 등 버그바운티 참여",
+        "- 약 55개 취약점 제보",
+        "- SQL Injection, Buffer Overflow, Command Injection 등",
       ],
     },
     {
@@ -73,8 +82,8 @@ function Projects() {
       period: "2022",
       title: "Static Program Analysis for Black-Box",
       contents: [
-        "Black-box 프로그램을 대상으로 취약점 발견 기술 연구 및 개발",
-        "TaintAnalysis 구현 및 FSB 탐지 패턴 제작",
+        "- Black-box 프로그램을 대상으로 취약점 발견 기술 연구 및 개발",
+        "- TaintAnalysis 구현 및 FSB 탐지 패턴 제작",
         "https://github.com/mongddangdda/binary-magician-legacy",
       ],
     },
@@ -83,9 +92,9 @@ function Projects() {
       period: "2021",
       title: "보안 취약점 분석 및 제보",
       contents: [
-        "권한 상승 사례 분석 및 취약점 메커니즘 연구",
-        "“권한 상승 취약점 점검 가이드” 제작",
-        "권한 상승 취약점 3건 제보",
+        "- 권한 상승 사례 분석 및 취약점 메커니즘 연구",
+        "- “권한 상승 취약점 점검 가이드” 제작",
+        "- 권한 상승 취약점 3건 제보",
       ],
     },
     {
@@ -93,8 +102,8 @@ function Projects() {
       period: "2016",
       title: "스마트팜 보안 가이드라인 구축",
       contents: [
-        "스마트팜 보안 취약점 분석",
-        "원격에서 농장을 조종할 수 있는 취약점 발견",
+        "- 스마트팜 보안 취약점 분석",
+        "- 원격에서 농장을 조종할 수 있는 취약점 발견",
       ],
     },
   ];
@@ -102,7 +111,7 @@ function Projects() {
     <ProjectsContainer $ismobile={isMobile}>
       <div className="title">PROJECTS</div>
       <ul className="heightBox">
-        {projectsValue.map((el) => {
+        {projectsValue.map((el, index) => {
           return (
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
@@ -112,7 +121,11 @@ function Projects() {
                 </div>
                 <div className="educationContents">
                   {el.contents.map((el, i) => {
-                    return (
+                    return index === 1 && i === 2 ? (
+                      <a key={i} className="link" href="el">
+                        - <span className="linkText">[ Github Link ]</span>
+                      </a>
+                    ) : (
                       <div className="contents" key={i}>
                         {el}
                       </div>

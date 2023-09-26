@@ -15,7 +15,7 @@ const TalksContainer = styled.section`
   }
 
   .heightBox {
-    height: 520px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,6 +43,8 @@ const TalksContainer = styled.section`
       }
 
       .educationContents {
+        list-style-type: none;
+        padding: 0;
         .contents {
           margin-bottom: 2px;
           word-break: keep-all;
@@ -53,7 +55,64 @@ const TalksContainer = styled.section`
 `;
 
 function Talks() {
-  return <div>ABOUTME</div>;
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+  const talksValue = [
+    {
+      id: 1,
+      period: "2022.06",
+      title: "Stealien Security Seminar",
+      contents: [
+        "- “권한 상승 취약점 분석 방법론”",
+        "- 관리적, 기술적 측면의 권한 상승 취약점 소개",
+      ],
+    },
+    {
+      id: 2,
+      period: "2021.08",
+      title: "제23회 해킹캠프",
+      contents: ["- “카카오톡 후킹”", "- 카카오톡 분석 및 채팅 처리구문 후킹"],
+    },
+    {
+      id: 3,
+      period: "2016.05",
+      title: "CODEGATE Junior Session",
+      contents: [
+        "- “로우레벨 해킹사례로 본 하드웨어 보안의 중요성”",
+        "- Rowhammer 취약점, IoT 장비 등 하드웨어 해킹 사례 분석",
+      ],
+    },
+  ];
+
+  return (
+    <TalksContainer $ismobile={isMobile}>
+      <div className="title">TALKS</div>
+      <ul className="heightBox">
+        {talksValue.map((el) => {
+          return (
+            <li key={el.id} className="listContainer">
+              <div className="period">{el.period}</div>
+              <div className="contentsContainer">
+                <div className="educationTitle">
+                  <b>{el.title}</b>
+                </div>
+                <ul className="educationContents">
+                  {el.contents.map((el, i) => {
+                    return (
+                      <li className="contents" key={i}>
+                        {el}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </TalksContainer>
+  );
 }
 
 export default Talks;

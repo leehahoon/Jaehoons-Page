@@ -15,7 +15,7 @@ const ExperiencesContainer = styled.section`
   }
 
   .heightBox {
-    height: 180px;
+    height: 190px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
