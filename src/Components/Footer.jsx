@@ -6,7 +6,7 @@ const FooterContainer = styled.footer`
 `;
 
 function Footer() {
-  return <FooterContainer>푸터에오</FooterContainer>;
+  return <FooterContainer>푸터입니다</FooterContainer>;
 }
 
 export default Footer;
