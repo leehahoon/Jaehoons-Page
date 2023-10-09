@@ -98,7 +98,7 @@ function Header() {
                 Blog
               </div>
             </a>
-            <a target="_blank" href="https://facebook.com/leehahoon1001">
+            <a target="_blank" href="https://facebook.com/leehahoon1001g">
               <div className="facebook link">
                 <img src={FacebookLogo} className="icon" alt="GithubLogo" />
                 Facebook
