@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Jaehoons-Page/static/css/main.233b3b67.css",
+    "main.js": "/Jaehoons-Page/static/js/main.7e9a87d0.js",
+    "static/js/787.5c39024c.chunk.js": "/Jaehoons-Page/static/js/787.5c39024c.chunk.js",
+    "static/media/profileImg.png": "/Jaehoons-Page/static/media/profileImg.f95a9dfc3af3eccfc78a.png",
+    "static/media/tstory_logo.png": "/Jaehoons-Page/static/media/tstory_logo.7bed5b751aa6aff10c6c.png",
+    "static/media/facebook.png": "/Jaehoons-Page/static/media/facebook.e93a6976eaeef5227143.png",
+    "static/media/github.png": "/Jaehoons-Page/static/media/github.8e2a9e7d53fa4340a09e.png",
+    "index.html": "/Jaehoons-Page/index.html",
+    "main.233b3b67.css.map": "/Jaehoons-Page/static/css/main.233b3b67.css.map",
+    "main.7e9a87d0.js.map": "/Jaehoons-Page/static/js/main.7e9a87d0.js.map",
+    "787.5c39024c.chunk.js.map": "/Jaehoons-Page/static/js/787.5c39024c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.233b3b67.css",
+    "static/js/main.7e9a87d0.js"
+  ]
+}
