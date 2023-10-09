@@ -54,7 +54,7 @@ function Footer() {
       <div className="linkContainer">
         <div className="infoContainer">
           E-mail
-          <span className="info">leehahoon@gmail.com</span>
+          <span className="info">leehahoon1001@gmail.com</span>
         </div>
         <div className="infoContainer">
           Github

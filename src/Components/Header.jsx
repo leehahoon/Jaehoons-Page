@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ProfileImg from "../Image/profileImg.png";
 import TstoryLogo from "../Image/tstory_logo.png";
 import GithubLogo from "../Image/github.png";
+import FacebookLogo from "../Image/facebook.png";
 import { useMediaQuery } from "react-responsive";
 
 const HeaderContainer = styled.header`
@@ -98,9 +99,9 @@ function Header() {
               </div>
             </a>
             <a target="_blank" href="https://naver.com">
-              <div className="youtube link">
-                <img src={GithubLogo} className="icon" alt="GithubLogo" />
-                Youtube
+              <div className="facebook link">
+                <img src={FacebookLogo} className="icon" alt="GithubLogo" />
+                Facebook
               </div>
             </a>
           </div>
