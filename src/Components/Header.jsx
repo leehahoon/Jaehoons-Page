@@ -47,8 +47,8 @@ const ProfileContainer = styled.div`
     .linkContainer {
       display: flex;
       align-items: center;
-      width: 100%;
-      justify-content: space-evenly;
+      width: 60%;
+      justify-content: space-between;
 
       a {
         text-decoration: none;

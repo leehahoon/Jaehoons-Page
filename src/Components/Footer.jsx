@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.footer`
-  margin-top: 50px;
-  height: ${(props) => (props.$ismobile ? "120px" : "80px")};
-  padding: ${(props) => (props.$ismobile ? "0" : "5%")};
+  height: ${(props) => (props.$ismobile ? "120px" : "150px")};
+  width: 100%;
+  padding: ${(props) => (props.$ismobile ? "0" : "30px 0")};
   background-color: rgb(246, 246, 246);
   position: relative;
   display: flex;
@@ -19,9 +19,13 @@ const FooterContainer = styled.footer`
   font-family: "Pretendard-Regular";
 
   .linkContainer {
-    margin-left: ${(props) => (props.$ismobile ? "30px" : "")};
+    margin-left: 30px;
     flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
     color: #7d7d7d;
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-around;
 
     a {
       color: #7d7d7d;
@@ -31,10 +35,6 @@ const FooterContainer = styled.footer`
     .info {
       margin-left: 20px;
     }
-  }
-
-  .infoContainer:not(:last-of-type) {
-    margin-bottom: 10px;
   }
 
   .copyrightContainer {

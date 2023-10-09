@@ -5,6 +5,15 @@ const ProjectsContainer = styled.section`
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
   margin-bottom: 80px;
 
+  @font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+      format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  font-family: "Pretendard-Regular";
+
   .title {
     border-bottom: 1px solid rgb(236, 236, 235);
     padding-bottom: 10px;
@@ -15,7 +24,6 @@ const ProjectsContainer = styled.section`
   }
 
   .heightBox {
-    height: 520px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,6 +67,10 @@ const ProjectsContainer = styled.section`
       }
     }
   }
+
+  .listContainer:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
 `;
 
 function Projects() {
@@ -69,16 +81,6 @@ function Projects() {
   const projectsValue = [
     {
       id: 1,
-      period: "2023",
-      title: "보안 취약점 분석 및 제보",
-      contents: [
-        "- KISA, 파인더갭 등 버그바운티 참여",
-        "- 약 55개 취약점 제보",
-        "- SQL Injection, Buffer Overflow, Command Injection 등",
-      ],
-    },
-    {
-      id: 2,
       period: "2022",
       title: "Static Program Analysis for Black Box",
       contents: [
@@ -88,7 +90,7 @@ function Projects() {
       ],
     },
     {
-      id: 3,
+      id: 2,
       period: "2021",
       title: "Privilege Escalation Vulnerability Analysis",
       contents: [
@@ -98,7 +100,7 @@ function Projects() {
       ],
     },
     {
-      id: 4,
+      id: 3,
       period: "2016",
       title: "Smart Farm Security Guidelines",
       contents: [
@@ -121,8 +123,8 @@ function Projects() {
                 </div>
                 <div className="projectsContents">
                   {el.contents.map((el, i) => {
-                    return index === 1 && i === 2 ? (
-                      <a key={i} className="link" href="el">
+                    return index === 0 && i === 2 ? (
+                      <a target="blank_" key={i} className="link" href={el}>
                         - <span className="linkText">[ Github Link ]</span>
                       </a>
                     ) : (

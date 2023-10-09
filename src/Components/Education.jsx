@@ -23,7 +23,6 @@ const EducationContainer = styled.section`
   }
 
   .heightBox {
-    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,6 +57,10 @@ const EducationContainer = styled.section`
       }
     }
   }
+
+  .listContainer:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
 `;
 
 function Education() {
@@ -67,31 +70,27 @@ function Education() {
   const educationValue = [
     {
       id: 1,
-      period: "2018.03 ~ 2024.02",
-      title: "B.S. Computer Science & Engineering at Soongsil University",
-      contents: [
-        "전공 : 컴퓨터학부",
-        "전체 평점 : 3.89/4.5 취득학점 : 127/133",
-      ],
+      period: "2024.02 ~ present",
+      title: "KAIST",
+      contents: ["M.S. in Information Security"],
     },
     {
       id: 2,
-      period: "2015.03 ~ 2018.02",
-      title:
-        "Department of Information and Communication Technology at Sunrin Internet High School",
-      contents: ["전공 : 정보통신과"],
+      period: "2018.03 ~ 2024.02",
+      title: "Soongsil University",
+      contents: ["B.S. in Computer Science & Engineering"],
     },
     {
       id: 3,
-      period: "2016.03 ~ 2017.02",
-      title: "KITRI BoB, 5th Security Consulting Track",
-      contents: ["Best of the Best 5th 보안컨설팅 트랙 수료"],
+      period: "2015.03 ~ 2018.02",
+      title: "Sunrin Internet High School",
+      contents: ["Department of Information and Communication Technology"],
     },
     {
       id: 4,
-      period: "2024.02 ~ present",
-      title: "카이스트 대학원",
-      contents: ["?????????", "SDAfdfdsgsd"],
+      period: "2016.03 ~ 2017.02",
+      title: "KITRI Best of the Best",
+      contents: ["5th Security Consulting Track"],
     },
   ];
   return (

@@ -23,7 +23,6 @@ const AwardsContainer = styled.section`
   }
 
   .heightBox {
-    height: 690px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,6 +66,10 @@ const AwardsContainer = styled.section`
       }
     }
   }
+
+  .listContainer:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
 `;
 
 function Awards() {
@@ -79,48 +82,36 @@ function Awards() {
       id: 1,
       period: "2023",
       title: "SSUCTF, 2nd Prize",
-      contents: ["- 숭실대학교 해킹방어대회"],
     },
     {
       id: 2,
       period: "2023",
       title: "HackingZone X-MAS Capture The Bug, 2nd Prize",
-      contents: ["- 웹사이트, 모바일앱 서비스 취약점 찾기 대회"],
     },
     {
       id: 3,
       period: "2021",
       title: "Metasploit Community CTF, 4th Prize",
-      contents: [" PoSTLTimes 팀", "- RAPID7 주최 해킹대회"],
     },
     {
       id: 4,
       period: "2021",
-      title: "숭실대학교 컴퓨터학부 소프트웨어 공모전",
-      contents: [
-        "- 은상",
-        "- 연인들을 위한 핀테크 서비스 개발",
-        "- 서버 및 데이터베이스 개발",
-      ],
+      title: "Soongsil Software Contest, 2nd Prize",
     },
     {
       id: 5,
       period: "2021",
       title: "Hack The GRU, 2nd Prize",
-      contents: ["- “블록체인 안전자산 보관서비스” 버그바운티 대회"],
     },
     {
       id: 6,
       period: "2016",
       title: "WhiteHat Contest, 2nd Prize",
-      contents: ["- 사이버 보안분야 발전에 기여할 정책 또는 기술 제언"],
     },
     {
       id: 7,
       period: "2016",
-      title:
-        "Software Contest, Application Security Section 2nd Prize, Minister of the Interior Award",
-      contents: ["- 안전한 소프트웨어 개발 및 취약점 점검 대회"],
+      title: "Software Contest, Application Security Section, 2nd Prize",
     },
   ];
 
@@ -133,22 +124,7 @@ function Awards() {
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
-                <div className="awardsTitle">
-                  <b>{el.title}</b>
-                </div>
-                <div className="wardsContents">
-                  {el.contents.map((el, i) => {
-                    return index === 1 && i === 2 ? (
-                      <a key={i} className="link" href="el">
-                        - <span className="linkText">[ Github Link ]</span>
-                      </a>
-                    ) : (
-                      <div className="contents" key={i}>
-                        {el}
-                      </div>
-                    );
-                  })}
-                </div>
+                <div className="awardsTitle">{el.title}</div>
               </div>
             </li>
           );

@@ -23,7 +23,6 @@ const TalksContainer = styled.section`
   }
 
   .heightBox {
-    height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,6 +58,10 @@ const TalksContainer = styled.section`
         }
       }
     }
+  }
+
+  .listContainer:not(:last-of-type) {
+    margin-bottom: 50px;
   }
 `;
 
