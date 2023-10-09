@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import TstoryLogo from "../Image/tstory_logo.png";
-import GithubLogo from "../Image/github.png";
 import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.footer`
@@ -21,34 +19,26 @@ const FooterContainer = styled.footer`
   font-family: "Pretendard-Regular";
 
   .linkContainer {
-    display: flex;
-    justify-content: space-between;
-    height: 80%;
-    width: 30%;
     margin-left: ${(props) => (props.$ismobile ? "30px" : "")};
     flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
+    color: #7d7d7d;
 
     a {
-      color: #454545;
+      color: #7d7d7d;
       text-decoration: none;
     }
 
-    .link {
-      display: flex;
-      align-items: center;
-      margin-right: 10px;
-      margin-bottom: 5px;
-    }
-
-    .icon {
-      width: ${(props) => (props.$ismobile ? "20px" : "35px")};
-      height: ${(props) => (props.$ismobile ? "20px" : "35px")};
-      margin-right: 10px;
+    .info {
+      margin-left: 20px;
     }
   }
 
+  .infoContainer:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
   .copyrightContainer {
-    color: #454545;
+    color: #7d7d7d;
     position: absolute;
     bottom: 30px;
     right: 30px;
@@ -62,24 +52,30 @@ function Footer() {
   return (
     <FooterContainer $ismobile={isMobile}>
       <div className="linkContainer">
-        <a href="https://naver.com">
-          <div className="github link">
-            <img src={GithubLogo} className="icon" alt="GithubLogo" />
-            Github
-          </div>
-        </a>
-        <a href="https://naver.com">
-          <div className="blog link">
-            <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
-            Blog
-          </div>
-        </a>
-        <a href="https://naver.com">
-          <div className="youtube link">
-            <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
-            Youtube
-          </div>
-        </a>
+        <div className="infoContainer">
+          E-mail
+          <span className="info">leehahoon@gmail.com</span>
+        </div>
+        <div className="infoContainer">
+          Github
+          <a
+            className="link info"
+            target="_blank"
+            href="https://github.com/leehahoon"
+          >
+            https://github.com/leehahoon
+          </a>
+        </div>
+        <div className="infoContainer">
+          Blog
+          <a
+            className="link info"
+            target="_blank"
+            href="https://leehahoon.tistory.com"
+          >
+            https://leehahoon.tistory.com
+          </a>
+        </div>
       </div>
       <div className="copyrightContainer">
         {isMobile ? (
