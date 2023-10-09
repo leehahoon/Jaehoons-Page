@@ -85,7 +85,7 @@ function Awards() {
     },
     {
       id: 2,
-      period: "2023",
+      period: "2022",
       title: "HackingZone X-MAS Capture The Bug, 2nd Prize",
     },
     {
@@ -106,12 +106,12 @@ function Awards() {
     {
       id: 6,
       period: "2016",
-      title: "WhiteHat Contest, 2nd Prize",
+      title: "Ministry of Defense, WhiteHat Contest, 2nd Prize",
     },
     {
       id: 7,
       period: "2016",
-      title: "Software Contest, Application Security Section, 2nd Prize",
+      title: "KISA, Development & Security Competition, 2nd Prize",
     },
   ];
 

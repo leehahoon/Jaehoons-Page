@@ -63,7 +63,7 @@ function Index({
 
   const indexValue = [
     { id: 0, value: topRef, text: "Top" },
-    { id: 1, value: aboutMeRef, text: "AboutMe" },
+    { id: 1, value: aboutMeRef, text: "About Me" },
     { id: 2, value: educationRef, text: "Education" },
     { id: 3, value: publicationsRef, text: "Publications" },
     { id: 4, value: experiencesRef, text: "Work Experiences" },
