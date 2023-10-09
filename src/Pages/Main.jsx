@@ -8,6 +8,7 @@ import Projects from "../Components/Projects";
 import Talks from "../Components/Talks";
 import Awards from "../Components/Awards";
 import BugBounty from "../Components/BugBounty";
+import Publications from "../Components/Publication";
 import Footer from "../Components/Footer";
 import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
@@ -40,6 +41,7 @@ function Main() {
   const talksRef = useRef(null);
   const awardsRef = useRef(null);
   const bugBountyRef = useRef(null);
+  const publicationsRef = useRef(null);
 
   return (
     <MainContainer $ismobile={isMobile}>
@@ -58,6 +60,7 @@ function Main() {
             talksRef={talksRef}
             awardsRef={awardsRef}
             bugBountyRef={bugBountyRef}
+            publicationsRef={publicationsRef}
           />
         )}
         <Contents>
@@ -65,6 +68,8 @@ function Main() {
           <AboutMe />
           <div ref={educationRef} />
           <Education />
+          <div ref={publicationsRef} />
+          <Publications />
           <div ref={experiencesRef} />
           <Experiences />
           <div ref={projectsRef} />

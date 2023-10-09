@@ -64,9 +64,63 @@ function BugBounty() {
   const isMobile = useMediaQuery({
     query: "(max-width:767px)",
   });
+
+  const bugBountyValue = [
+    {
+      id: 1,
+      period: "2021 ~ 2023",
+      title: "KVE",
+      contents: [
+        "- KVE-2023-0147, KVE-2023-0148, KVE-2023-0251, KVE-2023-5048",
+        "- KVE-2022-0745, KVE-2022-1899, KVE-2022-1901, KVE-2022-1930",
+        "- KVE-2021-1130, KVE-2021-1167, KVE-2021-1168",
+      ],
+    },
+    {
+      id: 2,
+      period: "2022",
+      title: "ASUS Product Security Advisory",
+      contents: [
+        "- Found security issue in router",
+        "- Fixed in Firmware version 3.0.0.4.386.51255",
+      ],
+    },
+    {
+      id: 3,
+      period: "2021 ~ 2022",
+      title: "FINDTHEGAP BugBounty",
+      contents: [
+        "- Found 20+ Vulnerabilities in Web, App services",
+        "- Hall of Frame 6th in 2021",
+      ],
+    },
+  ];
   return (
     <BugBountyContainer $ismobile={isMobile}>
       <div className="title">BUG BOUNTY</div>
+      <ul className="heightBox">
+        {bugBountyValue.map((el) => {
+          return (
+            <li key={el.id} className="listContainer">
+              <div className="period">{el.period}</div>
+              <div className="contentsContainer">
+                <div className="educationTitle">
+                  <b>{el.title}</b>
+                </div>
+                <div className="educationContents">
+                  {el.contents.map((el, i) => {
+                    return (
+                      <div className="contents" key={i}>
+                        {el}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </BugBountyContainer>
   );
 }
