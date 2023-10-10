@@ -84,8 +84,8 @@ function Projects() {
       period: "2022",
       title: "Static Program Analysis for Black Box",
       contents: [
-        "- Black-box 프로그램을 대상으로 취약점 발견 기술 연구 및 개발",
-        "- TaintAnalysis 구현 및 FSB 탐지 패턴 제작",
+        "- Research about vulns discovery for black-box programs",
+        "- Development of taint analysis and fsb detection patterns",
         "https://github.com/mongddangdda/binary-magician-legacy",
       ],
     },
@@ -94,9 +94,8 @@ function Projects() {
       period: "2021",
       title: "Privilege Escalation Vulnerability Analysis",
       contents: [
-        "- 권한 상승 사례 분석 및 취약점 메커니즘 연구",
-        "- “권한 상승 취약점 점검 가이드” 제작",
-        "- 권한 상승 취약점 3건 제보",
+        "- Vulnerability analysis about privilege escalation",
+        "- https://drive.google.com/drive/folders/1VBJ11OFed-9_2RJWTPaD4s48hBM-IJsc?usp=sharing",
       ],
     },
     {
@@ -104,8 +103,8 @@ function Projects() {
       period: "2016",
       title: "Smart Farm Security Guidelines",
       contents: [
-        "- 스마트팜 보안 취약점 분석",
-        "- 원격에서 농장을 조종할 수 있는 취약점 발견",
+        "- Analyzing smart farm security vulnerabilities",
+        "- Discover vulns that can control farms remotely",
       ],
     },
   ];

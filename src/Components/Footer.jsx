@@ -57,7 +57,7 @@ function Footer() {
           <span className="info">leehahoon1001@gmail.com</span>
         </div>
         <div className="infoContainer">
-          Github
+          GitHub
           <a
             className="link info"
             target="_blank"

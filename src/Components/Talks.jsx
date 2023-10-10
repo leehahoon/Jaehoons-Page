@@ -74,25 +74,23 @@ function Talks() {
       id: 1,
       period: "2022.06",
       title:
-        "Methodology of Privilege Escalation Vulnerability Analysis, Stealien Security Seminar",
+        "Methodology of Privilege Escalation Vulnerability Analysis",
       contents: [
-        "- “권한 상승 취약점 분석 방법론”",
-        "- 관리적, 기술적 측면의 권한 상승 취약점 소개",
+        "- Stealien Security Seminar",
       ],
     },
     {
       id: 2,
       period: "2021.08",
-      title: "KakaoTalk Hooking, 23th HackingCamp ",
-      contents: ["- “카카오톡 후킹”", "- 카카오톡 분석 및 채팅 처리구문 후킹"],
+      title: "KakaoTalk Hooking ",
+      contents: ["- 23th HackingCamp"],
     },
     {
       id: 3,
       period: "2016.05",
-      title: "The Importance of Hardware Security, Codegate Junior Session",
+      title: "The Importance of Hardware Security",
       contents: [
-        "- “로우레벨 해킹사례로 본 하드웨어 보안의 중요성”",
-        "- Rowhammer 취약점, IoT 장비 등 하드웨어 해킹 사례 분석",
+        "- Codegate Junior Session",
       ],
     },
   ];

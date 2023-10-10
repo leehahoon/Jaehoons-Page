@@ -84,7 +84,7 @@ function Education() {
       id: 3,
       period: "2015.03 ~ 2018.02",
       title: "Sunrin Internet High School",
-      contents: ["Department of Information and Communication Technology"],
+      contents: ["Information and Communication Technology"],
     },
     {
       id: 4,

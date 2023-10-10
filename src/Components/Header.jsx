@@ -89,7 +89,7 @@ function Header() {
             <a target="_blank" href="https://github.com/leehahoon">
               <div className="github link">
                 <img src={GithubLogo} className="icon" alt="GithubLogo" />
-                Github
+                GitHub
               </div>
             </a>
             <a target="_blank" href="https://leehahoon.tistory.com">
