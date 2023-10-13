@@ -48,7 +48,7 @@ const ProfileContainer = styled.div`
     .linkContainer {
       display: flex;
       align-items: center;
-      width: 60%;
+      width: ${(props) => (props.$ismobile ? "90%" : "60%")};
       justify-content: space-between;
 
       a {
@@ -67,8 +67,12 @@ const ProfileContainer = styled.div`
         .icon {
           width: ${(props) => (props.$ismobile ? "20px" : "35px")};
           height: ${(props) => (props.$ismobile ? "20px" : "35px")};
-          margin-right: 10px;
+          margin-right: ${(props) => (props.$ismobile ? "5px" : "10px")};
         }
+      }
+
+      .link:not(last-of-type) {
+        margin-right: 10px;
       }
     }
   }
