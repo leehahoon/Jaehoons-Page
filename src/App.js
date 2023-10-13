@@ -1,13 +1,16 @@
 import "./App.css";
 import styled from "styled-components";
 import Main from "./Pages/Main";
+import Footer from "./Components/Footer";
 import { useMediaQuery } from "react-responsive";
 
 const AppContainer = styled.div`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  min-width: 320px;
+  flex-direction: column;
+  overflow-x: hidden;
 `;
 
 function App() {
@@ -17,6 +20,7 @@ function App() {
   return (
     <AppContainer $ismobile={isMobile}>
       <Main />
+      <Footer />
     </AppContainer>
   );
 }

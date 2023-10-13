@@ -3,10 +3,12 @@ import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.footer`
   height: ${(props) => (props.$ismobile ? "120px" : "150px")};
-  width: 100%;
   padding: ${(props) => (props.$ismobile ? "0" : "30px 0")};
   background-color: rgb(246, 246, 246);
+  font-size: ${(props) => (props.$ismobile ? "0.8rem" : "")};
   position: relative;
+  width: 100%;
+  left: 0;
   display: flex;
   align-items: center;
   @font-face {
@@ -19,14 +21,13 @@ const FooterContainer = styled.footer`
   font-family: "Pretendard-Regular";
 
   .linkContainer {
-    margin-left: 30px;
+    margin-left: ${(props) => (props.$ismobile ? "10px" : "30px")};
     flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
     color: #7d7d7d;
     display: flex;
-    height: 100px;
+    height: ${(props) => (props.$ismobile ? "80px" : "100px")};
     flex-direction: column;
     justify-content: space-around;
-
     a {
       color: #7d7d7d;
       text-decoration: none;
@@ -40,8 +41,8 @@ const FooterContainer = styled.footer`
   .copyrightContainer {
     color: #7d7d7d;
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: ${(props) => (props.$ismobile ? "10px" : "30px")};
+    right: ${(props) => (props.$ismobile ? "10px" : "30px")};
   }
 `;
 

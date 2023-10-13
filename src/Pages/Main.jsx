@@ -9,13 +9,13 @@ import Talks from "../Components/Talks";
 import Awards from "../Components/Awards";
 import BugBounty from "../Components/BugBounty";
 import Publications from "../Components/Publication";
-import Footer from "../Components/Footer";
 import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
 
 const MainContainer = styled.main`
   width: 100%;
   max-width: 1440px;
+  overflow-x: hidden;
 `;
 
 const ContentsContainer = styled.div`
@@ -82,7 +82,6 @@ function Main() {
           <BugBounty />
         </Contents>
       </ContentsContainer>
-      <Footer />
     </MainContainer>
   );
 }
