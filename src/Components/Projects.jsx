@@ -95,7 +95,7 @@ function Projects() {
       title: "Privilege Escalation Vulnerability Analysis",
       contents: [
         "- Vulnerability analysis about privilege escalation",
-        "- https://drive.google.com/drive/folders/1VBJ11OFed-9_2RJWTPaD4s48hBM-IJsc?usp=sharing",
+        "https://drive.google.com/drive/folders/1VBJ11OFed-9_2RJWTPaD4s48hBM-IJsc?usp=sharing",
       ],
     },
     {
@@ -125,6 +125,11 @@ function Projects() {
                     return index === 0 && i === 2 ? (
                       <a target="blank_" key={i} className="link" href={el}>
                         - <span className="linkText">[ Github Link ]</span>
+                      </a>
+                    ) : index === 1 && i === 1 ? (
+                      <a target="blank_" key={i} className="link" href={el}>
+                        -{" "}
+                        <span className="linkText">[ Google Drive Link ]</span>
                       </a>
                     ) : (
                       <div className="contents" key={i}>
