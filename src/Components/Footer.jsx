@@ -19,7 +19,7 @@ const FooterContainer = styled.footer`
     font-style: normal;
   }
   font-family: "Pretendard-Regular";
-  margin-top: ${(props) => (props.$ismobile ? "30px" : "")};
+  /* margin-top: ${(props) => (props.$ismobile ? "30px" : "")}; */
 
   .linkContainer {
     margin-left: ${(props) => (props.$ismobile ? "10px" : "30px")};

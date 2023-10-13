@@ -58,6 +58,7 @@ const ProjectsContainer = styled.section`
 
         .link {
           text-decoration: none;
+          color: black;
 
           .linkText {
             color: black;
