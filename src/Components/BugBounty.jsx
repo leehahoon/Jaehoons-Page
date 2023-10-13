@@ -23,7 +23,6 @@ const BugBountyContainer = styled.section`
   }
 
   .heightBox {
-    height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,6 +56,10 @@ const BugBountyContainer = styled.section`
         }
       }
     }
+  }
+
+  .listContainer:not(:last-of-type) {
+    margin-bottom: 50px;
   }
 `;
 
