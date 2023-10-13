@@ -74,9 +74,9 @@ function Footer() {
           <a
             className="link info"
             target="_blank"
-            href="https://leehahoon.tistory.com"
+            href="https://blog.leehahoon.kr"
           >
-            https://leehahoon.tistory.com
+            https://blog.leehahoon.kr
           </a>
         </div>
       </div>

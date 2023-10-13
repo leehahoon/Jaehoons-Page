@@ -96,13 +96,13 @@ function Header() {
                 GitHub
               </div>
             </a>
-            <a target="_blank" href="https://leehahoon.tistory.com">
+            <a target="_blank" href="https://blog.leehahoon.kr">
               <div className="blog link">
                 <img src={TstoryLogo} className="icon" alt="TstoryLogo" />
                 Blog
               </div>
             </a>
-            <a target="_blank" href="https://facebook.com/leehahoon1001g">
+            <a target="_blank" href="https://facebook.com/leehahoon1001">
               <div className="facebook link">
                 <img src={FacebookLogo} className="icon" alt="GithubLogo" />
                 Facebook
