@@ -67,7 +67,7 @@ function Experiences() {
   const experiencesValue = [
     {
       id: 1,
-      period: "2022.10 ~ 2024.01",
+      period: "2022.10 ~ 2023.12",
       title: "Security Researcher at STEALIEN",
       contents: ["Penetration Testing and Security Researching"],
     },

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ProfileImg from "../Image/profileImg.png";
 import TstoryLogo from "../Image/tstory_logo.png";
 import GithubLogo from "../Image/github.png";
-import FacebookLogo from "../Image/facebook.png";
+import FacebookLogo from "../Image/x_logo.png";
 import { useMediaQuery } from "react-responsive";
 
 const HeaderContainer = styled.header`
@@ -102,10 +102,10 @@ function Header() {
                 Blog
               </div>
             </a>
-            <a target="_blank" href="https://facebook.com/leehahoon1001">
+            <a target="_blank" href="https://x.com/leehahoon1001">
               <div className="facebook link">
                 <img src={FacebookLogo} className="icon" alt="GithubLogo" />
-                Facebook
+                twitter
               </div>
             </a>
           </div>

@@ -81,37 +81,66 @@ function Awards() {
     {
       id: 1,
       period: "2023",
-      title: "SSUCTF, 2nd Prize",
+      title: "Hack the DRONE",
+      contents: [
+        "- 5th Prize",
+      ],
     },
     {
       id: 2,
-      period: "2022",
-      title: "HackingZone X-MAS Capture The Bug, 2nd Prize",
+      period: "2023",
+      title: "SSUCTF",
+      contents: [
+        "- 2nd Prize",
+      ],
     },
     {
       id: 3,
-      period: "2021",
-      title: "Metasploit Community CTF, 4th Prize",
+      period: "2022",
+      title: "HackingZone X-MAS Capture The Bug",
+      contents: [
+        "-  2nd Prize",
+      ],
     },
     {
       id: 4,
       period: "2021",
-      title: "Soongsil Software Contest, 2nd Prize",
+      title: "Metasploit Community CTF",
+      contents: [
+        "- 4th Prize",
+      ],
     },
     {
       id: 5,
       period: "2021",
-      title: "Hack The GRU, 2nd Prize",
+      title: "Soongsil Software Contest",
+      contents: [
+        "- 3th Prize",
+      ],
     },
     {
       id: 6,
-      period: "2016",
-      title: "Ministry of Defense, WhiteHat Contest, 2nd Prize",
+      period: "2021",
+      title: "Hack The GRU",
+      contents: [
+        "- 2nd Prize",
+      ],
     },
     {
       id: 7,
       period: "2016",
-      title: "KISA, Development & Security Competition, 2nd Prize",
+      title: "WhiteHat Contest, Ministry of Defense",
+      contents: [
+        "- 2nd Prize",
+      ],
+    },
+    {
+      id: 8,
+      period: "2016",
+      title: "KISA Development & Security Competition",
+      contents: [
+        "- 2nd Prize",
+      ],
     },
   ];
 
@@ -124,7 +153,16 @@ function Awards() {
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
-                <div className="awardsTitle">{el.title}</div>
+                <div className="awardsTitle"><b>{el.title}</b></div>
+                <div className="awardContents">
+                  {el.contents.map((el, i) => {
+                    return (
+                      <div className="contents" key={i}>
+                        {el}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </li>
           );
