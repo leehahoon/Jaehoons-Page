@@ -114,7 +114,7 @@ function BugBounty() {
       title: "FINDTHEGAP BugBounty",
       contents: [
         "- Found 20+ Vulnerabilities in Web, App services",
-        "- Hall of Frame 6th in 2021",
+        "- Hall of Fame 6th in 2021",
       ],
     },
   ];
