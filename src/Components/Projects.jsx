@@ -125,7 +125,7 @@ function Projects() {
                   {el.contents.map((el, i) => {
                     return index === 0 && i === 2 ? (
                       <a target="blank_" key={i} className="link" href={el}>
-                        - <span className="linkText">[ Github Link ]</span>
+                        - <span className="linkText">[ GitHub Link ]</span>
                       </a>
                     ) : index === 1 && i === 1 ? (
                       <a target="blank_" key={i} className="link" href={el}>

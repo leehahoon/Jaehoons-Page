@@ -31,6 +31,11 @@ const AboutMeContainer = styled.section`
     .information {
       font-size: ${(props) => (props.$ismobile ? "1rem" : "1.2rem")};
       margin: 0;
+
+      a {
+        text-decoration-line: underline;
+        color: black;
+      }
     }
 
     .text {
@@ -53,7 +58,7 @@ function AboutMe() {
           <br /> I'll make awe-some program analyzer. Just wait and see.
         </p>
         <p className="information">
-          <b>Email</b> : leehahoon1001@gmail.com
+          <b>Email</b> : <a href="mailto:leehahoon1001@gmail.com">leehahoon1001@gmail.com</a>
         </p>
       </div>
     </AboutMeContainer>
