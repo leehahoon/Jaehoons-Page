@@ -95,7 +95,7 @@ function Talks() {
       title: "KakaoTalk Hooking ",
       contents: [
         "- 23th HackingCamp",
-        "https://hackingcamp.org/",
+        "http://hackingcamp.org/",
       ],
     },
     {

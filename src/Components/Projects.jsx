@@ -83,9 +83,9 @@ function Projects() {
     {
       id: 1,
       period: "2022",
-      title: "Static Program Analysis for Black Box",
+      title: "Static Program Analysis for Binary",
       contents: [
-        "- Research about vulns discovery for black-box programs",
+        "- Research about vulns discovery for binary programs",
         "- Development of taint analysis and fsb detection patterns",
         "https://github.com/mongddangdda/binary-magician-legacy",
       ],
