@@ -85,7 +85,8 @@ function BugBounty() {
       title: "Synology Product Security Advisory",
       contents: [
         "- Found security vulnerabilities in camera",
-        "https://www.synology.com/ko-kr/security/bounty_program/acknowledgement",
+        "- CVE-2023-47802, CVE-2023-47803, CVE-2024-39351",
+        "https://www.synology.com/ko-kr/security/advisory/Synology_SA_23_15",
       ],
     },
     {
@@ -132,7 +133,7 @@ function BugBounty() {
                 </div>
                 <div className="educationContents">
                   {el.contents.map((el, i) => {
-                    return index === 0 && i === 1 ? (
+                    return index === 0 && i === 2 ? (
                       <a target="blank_" key={i} className="link" href={el}>
                         - <span className="linkText">[ Link ]</span>
                       </a>
