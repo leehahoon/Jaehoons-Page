@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.233b3b67.css",
-    "main.js": "/static/js/main.1de25870.js",
+    "main.js": "/static/js/main.834c56df.js",
     "static/js/787.5c39024c.chunk.js": "/static/js/787.5c39024c.chunk.js",
     "static/media/profileImg.png": "/static/media/profileImg.5a45a976cc29097057bc.png",
     "static/media/tstory_logo.png": "/static/media/tstory_logo.7bed5b751aa6aff10c6c.png",
@@ -9,11 +9,11 @@
     "static/media/github.png": "/static/media/github.8e2a9e7d53fa4340a09e.png",
     "index.html": "/index.html",
     "main.233b3b67.css.map": "/static/css/main.233b3b67.css.map",
-    "main.1de25870.js.map": "/static/js/main.1de25870.js.map",
+    "main.834c56df.js.map": "/static/js/main.834c56df.js.map",
     "787.5c39024c.chunk.js.map": "/static/js/787.5c39024c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.233b3b67.css",
-    "static/js/main.1de25870.js"
+    "static/js/main.834c56df.js"
   ]
 }
