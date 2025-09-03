@@ -54,6 +54,16 @@ const BugBountyContainer = styled.section`
           margin-bottom: 2px;
           word-break: keep-all;
         }
+
+        .link {
+          text-decoration: none;
+          color: black;
+
+          .linkText {
+            color: black;
+            text-decoration-line: underline;
+          }
+        }
       }
     }
   }
@@ -71,16 +81,27 @@ function BugBounty() {
   const bugBountyValue = [
     {
       id: 1,
+      period: "2023",
+      title: "Synology Product Security Advisory",
+      contents: [
+        "- Found security vulnerabilities in camera",
+        "- CVE-2023-47802, CVE-2023-47803, CVE-2024-39351",
+        "https://www.synology.com/ko-kr/security/advisory/Synology_SA_23_15",
+      ],
+    },
+    {
+      id: 2,
       period: "2021 ~ 2023",
       title: "KVE",
       contents: [
-        "- KVE-2023-0147, KVE-2023-0148, KVE-2023-0251, KVE-2023-5048",
+        "- KVE-2023-0147, KVE-2023-0148, KVE-2023-0251, KVE-2023-5047,",
+        "\u00A0\u00A0 KVE-2023-5048",
         "- KVE-2022-0745, KVE-2022-1899, KVE-2022-1901, KVE-2022-1930",
         "- KVE-2021-1130, KVE-2021-1167, KVE-2021-1168",
       ],
     },
     {
-      id: 2,
+      id: 3,
       period: "2022",
       title: "ASUS Product Security Advisory",
       contents: [
@@ -89,12 +110,12 @@ function BugBounty() {
       ],
     },
     {
-      id: 3,
+      id: 4,
       period: "2021 ~ 2022",
       title: "FINDTHEGAP BugBounty",
       contents: [
         "- Found 20+ Vulnerabilities in Web, App services",
-        "- Hall of Frame 6th in 2021",
+        "- Hall of Fame 6th in 2021",
       ],
     },
   ];
@@ -102,7 +123,7 @@ function BugBounty() {
     <BugBountyContainer $ismobile={isMobile}>
       <div className="title">BUG BOUNTY</div>
       <ul className="heightBox">
-        {bugBountyValue.map((el) => {
+        {bugBountyValue.map((el, index) => {
           return (
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
@@ -112,7 +133,11 @@ function BugBounty() {
                 </div>
                 <div className="educationContents">
                   {el.contents.map((el, i) => {
-                    return (
+                    return index === 0 && i === 2 ? (
+                      <a target="blank_" key={i} className="link" href={el}>
+                        - <span className="linkText">[ Link ]</span>
+                      </a>
+                    ) : (
                       <div className="contents" key={i}>
                         {el}
                       </div>

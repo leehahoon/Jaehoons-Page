@@ -56,6 +56,15 @@ const TalksContainer = styled.section`
           margin-bottom: 2px;
           word-break: keep-all;
         }
+        .link {
+          text-decoration: none;
+          color: black;
+
+          .linkText {
+            color: black;
+            text-decoration-line: underline;
+          }
+        }
       }
     }
   }
@@ -77,13 +86,17 @@ function Talks() {
         "Methodology of Privilege Escalation Vulnerability Analysis",
       contents: [
         "- Stealien Security Seminar",
+        "https://youtu.be/6YgSTZ9i7Vk?t=7145",
       ],
     },
     {
       id: 2,
       period: "2021.08",
       title: "KakaoTalk Hooking ",
-      contents: ["- 23th HackingCamp"],
+      contents: [
+        "- 23th HackingCamp",
+        "http://hackingcamp.org/",
+      ],
     },
     {
       id: 3,
@@ -99,7 +112,7 @@ function Talks() {
     <TalksContainer $ismobile={isMobile}>
       <div className="title">PRESENTATIONS</div>
       <ul className="heightBox">
-        {talksValue.map((el) => {
+        {talksValue.map((el, index) => {
           return (
             <li key={el.id} className="listContainer">
               <div className="period">{el.period}</div>
@@ -109,7 +122,16 @@ function Talks() {
                 </div>
                 <ul className="talksContents">
                   {el.contents.map((el, i) => {
-                    return (
+                    return index === 0 && i === 1 ? (
+                      <a target="blank_" key={i} className="link" href={el}>
+                        - <span className="linkText">[ YouTube Link ]</span>
+                      </a>
+                    ) : index === 1 && i === 1 ? (
+                      <a target="blank_" key={i} className="link" href={el}>
+                        -{" "}
+                        <span className="linkText">[ Link ]</span>
+                      </a>
+                    ) : (
                       <li className="contents" key={i}>
                         {el}
                       </li>

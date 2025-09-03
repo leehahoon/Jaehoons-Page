@@ -10,7 +10,7 @@ import Awards from "../Components/Awards";
 import BugBounty from "../Components/BugBounty";
 import Publications from "../Components/Publication";
 import { useMediaQuery } from "react-responsive";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const MainContainer = styled.main`
   width: 100%;
@@ -26,12 +26,15 @@ const ContentsContainer = styled.div`
 
 const Contents = styled.div`
   width: 100%;
+  padding-left: ${props => props.$isIndexFixed ? '210px' : '0'};
 `;
 
 function Main() {
   const isMobile = useMediaQuery({
     query: "(max-width:767px)",
   });
+
+  const [isIndexFixed, setIsIndexFixed] = useState(false);
 
   const topRef = useRef(null);
   const aboutMeRef = useRef(null);
@@ -61,9 +64,10 @@ function Main() {
             awardsRef={awardsRef}
             bugBountyRef={bugBountyRef}
             publicationsRef={publicationsRef}
+            onIndexFixedChange={setIsIndexFixed}
           />
         )}
-        <Contents>
+        <Contents $isIndexFixed={isIndexFixed}>
           <div ref={aboutMeRef} />
           <AboutMe />
           <div ref={educationRef} />

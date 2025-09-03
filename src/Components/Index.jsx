@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 const IndexContainer = styled.nav`
-  width: 30%;
-  height: 360px;
+
+  height: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: sticky;
-  top: 30px;
+  justify-content: space-between;
+  width: 260px;
+  position: ${props => props.$isFixed ? 'fixed' : 'sticky'};
+  top: ${props => props.$isFixed ? '30px' : '30px'};
+  left: ${props => props.$isFixed ? '5%' : 'auto'};
   border-left: 2px solid #5d5d5d;
   padding-left: 30px;
 
@@ -26,7 +29,7 @@ const IndexContainer = styled.nav`
   }
 
   .listContainer {
-    height: 280px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,7 +57,26 @@ function Index({
   awardsRef,
   bugBountyRef,
   publicationsRef,
+  onIndexFixedChange,
 }) {
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY >= 160) {
+        setIsFixed(true);
+        onIndexFixedChange(true);
+      } else {
+        setIsFixed(false);
+        onIndexFixedChange(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [onIndexFixedChange]);
+
   function scrollMove(element) {
     if (element.current) {
       element.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -73,7 +95,7 @@ function Index({
     { id: 8, value: bugBountyRef, text: "Bug Bounty" },
   ];
   return (
-    <IndexContainer>
+    <IndexContainer $isFixed={isFixed}>
       <span className="title">INDEX</span>
       <ul className="listContainer">
         {indexValue.map((el) => {
