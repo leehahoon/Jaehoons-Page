@@ -109,7 +109,7 @@ const AwardsContainer = styled.section`
             font-weight: 500;
             border: 1px solid #e2e8f0;
             flex-shrink: 0;
-            margin-left: 12px;
+            margin-left: ${(props) => (props.$ismobile ? "0" : "12px")};
           }
         }
 
