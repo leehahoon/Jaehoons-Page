@@ -137,8 +137,8 @@ function Projects() {
       period: "2022",
       title: "Static Program Analysis for Black Box",
       contents: [
-        "- Research about vulns discovery for black-box programs",
-        "- Development of taint analysis and fsb detection patterns",
+        "• Research about vulns discovery for black-box programs",
+        "• Development of taint analysis and fsb detection patterns",
         "https://github.com/mongddangdda/binary-magician-legacy",
       ],
     },
@@ -147,7 +147,7 @@ function Projects() {
       period: "2021",
       title: "Privilege Escalation Vulnerability Analysis",
       contents: [
-        "- Vulnerability analysis about privilege escalation",
+        "• Vulnerability analysis about privilege escalation",
         "https://drive.google.com/drive/folders/1VBJ11OFed-9_2RJWTPaD4s48hBM-IJsc?usp=sharing",
       ],
     },
@@ -156,8 +156,8 @@ function Projects() {
       period: "2016",
       title: "Smart Farm Security Guidelines",
       contents: [
-        "- Analyzing smart farm security vulnerabilities",
-        "- Discover vulns that can control farms remotely",
+        "• Analyzing smart farm security vulnerabilities",
+        "• Discover vulns that can control farms remotely",
       ],
     },
   ];
@@ -177,12 +177,11 @@ function Projects() {
                   {el.contents.map((el, i) => {
                     return index === 0 && i === 2 ? (
                       <a target="blank_" key={i} className="link" href={el}>
-                        - <span className="linkText">Github Link </span>
+                        • <span className="linkText">Github Link </span>
                       </a>
                     ) : index === 1 && i === 1 ? (
                       <a target="blank_" key={i} className="link" href={el}>
-                        -{" "}
-                        <span className="linkText">Google Drive Link </span>
+                        • <span className="linkText">Google Drive Link </span>
                       </a>
                     ) : (
                       <div className="contents" key={i}>

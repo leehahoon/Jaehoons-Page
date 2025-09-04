@@ -135,7 +135,7 @@ function Talks() {
       title:
         "Methodology of Privilege Escalation Vulnerability Analysis",
       contents: [
-        "- Stealien Security Seminar",
+        "• Stealien Security Seminar",
         "https://youtu.be/6YgSTZ9i7Vk?t=7145",
       ],
     },
@@ -144,7 +144,7 @@ function Talks() {
       period: "2021.08",
       title: "KakaoTalk Hooking ",
       contents: [
-        "- 23th HackingCamp",
+        "• 23th HackingCamp",
         "http://hackingcamp.org/",
       ],
     },
@@ -153,7 +153,7 @@ function Talks() {
       period: "2016.05",
       title: "The Importance of Hardware Security",
       contents: [
-        "- Codegate Junior Session",
+        "• Codegate Junior Session",
       ],
     },
   ];
@@ -174,12 +174,11 @@ function Talks() {
                   {el.contents.map((el, i) => {
                     return index === 0 && i === 1 ? (
                       <a target="blank_" key={i} className="link" href={el}>
-                        - <span className="linkText">YouTube Link </span>
+                        • <span className="linkText">YouTube Link </span>
                       </a>
                     ) : index === 1 && i === 1 ? (
                       <a target="blank_" key={i} className="link" href={el}>
-                        -{" "}
-                        <span className="linkText">Link </span>
+                        • <span className="linkText">Link </span>
                       </a>
                     ) : (
                       <li className="contents" key={i}>

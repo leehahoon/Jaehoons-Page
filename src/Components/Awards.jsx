@@ -109,6 +109,7 @@ const AwardsContainer = styled.section`
             font-weight: 500;
             border: 1px solid #e2e8f0;
             flex-shrink: 0;
+            margin-left: 12px;
           }
         }
 
@@ -141,7 +142,7 @@ function Awards() {
       period: "2023",
       title: "Hack the DRONE",
       contents: [
-        "- 5th Prize",
+        "• 5th Prize",
       ],
     },
     {
@@ -149,7 +150,7 @@ function Awards() {
       period: "2023",
       title: "SSUCTF",
       contents: [
-        "- 2nd Prize",
+        "• 2nd Prize",
       ],
     },
     {
@@ -157,7 +158,7 @@ function Awards() {
       period: "2022",
       title: "HackingZone X-MAS Capture The Bug",
       contents: [
-        "-  2nd Prize",
+        "• 2nd Prize",
       ],
     },
     {
@@ -165,7 +166,7 @@ function Awards() {
       period: "2021",
       title: "Metasploit Community CTF",
       contents: [
-        "- 4th Prize",
+        "• 4th Prize",
       ],
     },
     {
@@ -173,7 +174,7 @@ function Awards() {
       period: "2021",
       title: "Soongsil Software Contest",
       contents: [
-        "- 3th Prize",
+        "• 3rd Prize",
       ],
     },
     {
@@ -181,7 +182,7 @@ function Awards() {
       period: "2021",
       title: "Hack The GRU",
       contents: [
-        "- 2nd Prize",
+        "• 2nd Prize",
       ],
     },
     {
@@ -189,7 +190,7 @@ function Awards() {
       period: "2016",
       title: "WhiteHat Contest, Ministry of Defense",
       contents: [
-        "- 2nd Prize",
+        "• 2nd Prize",
       ],
     },
     {
@@ -197,12 +198,11 @@ function Awards() {
       period: "2016",
       title: "KISA Development & Security Competition",
       contents: [
-        "- 2nd Prize",
+        "• 2nd Prize",
       ],
     },
   ];
 
-  // 년도별로 그룹화
   const groupedAwards = awardsValue.reduce((acc, award) => {
     const year = award.period;
     if (!acc[year]) {
@@ -212,7 +212,6 @@ function Awards() {
     return acc;
   }, {});
 
-  // 년도별로 정렬 (최신순)
   const sortedYears = Object.keys(groupedAwards).sort((a, b) => b - a);
 
   return (

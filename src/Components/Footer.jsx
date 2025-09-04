@@ -4,7 +4,6 @@ import { useMediaQuery } from "react-responsive";
 const FooterContainer = styled.footer`
   padding: ${(props) => (props.$ismobile ? "40px 15px" : "60px 10%")};
   background: #ffffff;
-  border-top: 1px solid #e2e8f0;
   position: relative;
   width: 100%;
   

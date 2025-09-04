@@ -110,12 +110,6 @@ function Experiences() {
       title: "Security Researcher at STEALIEN",
       contents: ["Penetration Testing and Security Researching"],
     },
-    // {
-    //   id: 2,
-    //   period: "2019.04 ~ 2020.11",
-    //   title: "육군 3군단",
-    //   contents: ["정보보호병", "컴퓨터 정보보호 관련 임무 수행"],
-    // },
   ];
 
   return (

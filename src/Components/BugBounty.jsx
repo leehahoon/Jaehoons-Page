@@ -86,7 +86,6 @@ const Wrap = styled.section`
 
           .itemDetails {
             margin-top: 4px;
-            // margin-left: 8px;
 
             .detail {
               margin-bottom: 2px;
@@ -143,15 +142,15 @@ function BugBounty() {
       {
         title: "Synology Product Security Advisory",
         contents: [
-          "- Found security vulnerabilities in camera",
-          "- CVE-2023-47802, CVE-2023-47803, CVE-2024-39351",
+          "• Found security vulnerabilities in camera",
+          "• CVE-2023-47802, CVE-2023-47803, CVE-2024-39351",
           "https://www.synology.com/ko-kr/security/advisory/Synology_SA_23_15",
         ],
       },
       {
         title: "KVE",
         contents: [
-          "- KVE-2023-0147, KVE-2023-0148, KVE-2023-0251, KVE-2023-5047, KVE-2023-5048",
+          "• KVE-2023-0147, KVE-2023-0148, KVE-2023-0251, KVE-2023-5047, KVE-2023-5048",
         ],
       },
     ],
@@ -159,14 +158,14 @@ function BugBounty() {
       {
         title: "ASUS Product Security Advisory",
         contents: [
-          "- Found security issue in router",
-          "- Fixed in Firmware version 3.0.0.4.386.51255",
+          "• Found security issue in router",
+          "• Fixed in Firmware version 3.0.0.4.386.51255",
         ],    
       },
       {
         title: "KVE",
         contents: [
-          "- KVE-2022-0745, KVE-2022-1899, KVE-2022-1901, KVE-2022-1930",
+          "• KVE-2022-0745, KVE-2022-1899, KVE-2022-1901, KVE-2022-1930",
         ],
       },
     ],
@@ -174,14 +173,14 @@ function BugBounty() {
       {
         title: "FINDTHEGAP BugBounty",
         contents: [
-          "- Found 20+ Vulnerabilities in Web, App services",
-          "- Hall of Fame 6th in 2021",
+          "• Found 20+ Vulnerabilities in Web, App services",
+          "• Hall of Fame 6th in 2021",
         ],
       },
       {
         title: "KVE",
         contents: [
-          "- KVE-2021-1130, KVE-2021-1167, KVE-2021-1168",
+          "• KVE-2021-1130, KVE-2021-1167, KVE-2021-1168",
         ],
       },
     ],
@@ -206,7 +205,7 @@ function BugBounty() {
                         <div key={i} className="detail">
                           {content.startsWith("http") ? (
                             <>
-                              - <a href={content} target="_blank" rel="noopener noreferrer" className="link">
+                              • <a href={content} target="_blank" rel="noopener noreferrer" className="link">
                                 <span className="linkText">Link</span>
                               </a>
                             </>

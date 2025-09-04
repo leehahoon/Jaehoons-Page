@@ -8,11 +8,8 @@ const IndexContainer = styled.nav`
   width: 220px;
   position: sticky;
   top: 20px;
-  background: #ffffff;
   border-radius: 12px;
   padding: 24px;
-  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  // border: 1px solid #e2e8f0;
   z-index: 10;
 
   @font-face {
@@ -57,6 +54,7 @@ const IndexContainer = styled.nav`
       cursor: pointer;
       color: #64748b;
       padding: 10px 12px;
+      padding-left: 0;
       border-radius: 8px;
       transition: all 0.2s ease;
       font-weight: 500;

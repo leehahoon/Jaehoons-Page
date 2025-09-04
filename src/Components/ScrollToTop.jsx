@@ -27,7 +27,6 @@ const ScrollToTopButton = styled.button`
   &:hover {
     background: #e0f2fe;
     color: #3b82f6;
-    // border-color: #3b82f6;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
@@ -50,7 +49,7 @@ function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 160) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
