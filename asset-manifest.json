@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Jaehoons-Page/static/css/main.233b3b67.css",
-    "main.js": "/Jaehoons-Page/static/js/main.08522d3b.js",
+    "main.js": "/Jaehoons-Page/static/js/main.35502ea2.js",
     "static/js/787.5c39024c.chunk.js": "/Jaehoons-Page/static/js/787.5c39024c.chunk.js",
     "static/media/profileImg.png": "/Jaehoons-Page/static/media/profileImg.5a45a976cc29097057bc.png",
     "static/media/tstory_logo.png": "/Jaehoons-Page/static/media/tstory_logo.7bed5b751aa6aff10c6c.png",
@@ -9,11 +9,11 @@
     "static/media/github.png": "/Jaehoons-Page/static/media/github.8e2a9e7d53fa4340a09e.png",
     "index.html": "/Jaehoons-Page/index.html",
     "main.233b3b67.css.map": "/Jaehoons-Page/static/css/main.233b3b67.css.map",
-    "main.08522d3b.js.map": "/Jaehoons-Page/static/js/main.08522d3b.js.map",
+    "main.35502ea2.js.map": "/Jaehoons-Page/static/js/main.35502ea2.js.map",
     "787.5c39024c.chunk.js.map": "/Jaehoons-Page/static/js/787.5c39024c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.233b3b67.css",
-    "static/js/main.08522d3b.js"
+    "static/js/main.35502ea2.js"
   ]
 }
