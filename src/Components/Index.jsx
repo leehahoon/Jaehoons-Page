@@ -6,11 +6,13 @@ const IndexContainer = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   width: 220px;
+  min-width: 220px;
   position: sticky;
   top: 20px;
   border-radius: 12px;
   padding: 24px;
   z-index: 10;
+  flex-shrink: 0;
 
   @font-face {
     font-family: "Pretendard-Regular";

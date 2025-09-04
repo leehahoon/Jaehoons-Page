@@ -7,9 +7,11 @@ import { useMediaQuery } from "react-responsive";
 const AppContainer = styled.div`
   display: flex;
   width: 100%;
+  max-width: 100vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
 `;
 
 function App() {

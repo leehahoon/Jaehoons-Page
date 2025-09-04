@@ -18,13 +18,17 @@ const MainContainer = styled.main`
   max-width: 1800px;
   background: #f8fafc;
   padding-bottom: 100px;
+  overflow-x: hidden;
 `;
 
 const ContentsContainer = styled.div`
   width: 100%;
+  max-width: 100vw;
   padding: ${(props) => (props.$ismobile ? "0" : "0 5%")};
   display: flex;
-  gap: 40px;
+  flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
+  gap: ${(props) => (props.$ismobile ? "0" : "40px")};
+  overflow-x: hidden;
 `;
 
 const Contents = styled.div`
@@ -34,9 +38,11 @@ const Contents = styled.div`
   padding: ${(props) => (props.$ismobile ? "20px" : "32px")};
   overflow-x: hidden;
   word-break: break-word;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid #e2e8f0;
   overflow-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
 `;
 
 function Main() {
@@ -60,9 +66,7 @@ function Main() {
       <div ref={topRef} />
       <Header />
       <ContentsContainer>
-        {isMobile ? (
-          " "
-        ) : (
+        {!isMobile && (
           <Index
             aboutMeRef={aboutMeRef}
             educationRef={educationRef}
