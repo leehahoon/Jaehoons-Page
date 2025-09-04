@@ -122,7 +122,7 @@ const ProjectsContainer = styled.section`
   }
 
   .listContainer:not(:last-of-type) {
-    margin-bottom: 50px;
+    margin-bottom: 16px;
   }
 `;
 
