@@ -4,6 +4,7 @@ import TstoryLogo from "../Image/tstory_logo.png";
 import GithubLogo from "../Image/github.png";
 import FacebookLogo from "../Image/facebook.png";
 import { useMediaQuery } from "react-responsive";
+import { useState } from "react";
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -41,6 +42,12 @@ const ProfileContainer = styled.div`
     object-fit: cover;
     border: 3px solid #f1f5f9;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   .profileContents {
@@ -112,15 +119,57 @@ const ProfileContainer = styled.div`
   }
 `;
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: ${props => props.$isOpen ? 1 : 0};
+  visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
+  transition: all 0.3s ease;
+`;
+
+const ModalImage = styled.img`
+  width: ${props => props.$ismobile ? '280px' : '400px'};
+  height: ${props => props.$ismobile ? '280px' : '400px'};
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: ${props => props.$isOpen ? 'scale(1)' : 'scale(0.8)'};
+  transition: transform 0.3s ease;
+`;
+
 function Header() {
   const isMobile = useMediaQuery({
     query: "(max-width:767px)",
   });
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleImageClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <HeaderContainer $ismobile={isMobile}>
       <ProfileContainer $ismobile={isMobile}>
-        <img className="profileImg" src={ProfileImg} alt="profileImg" />
+        <img 
+          className="profileImg" 
+          src={ProfileImg} 
+          alt="profileImg" 
+          onClick={handleImageClick}
+        />
         <div className="profileContents">
           <h1 className="name">Jang JaeHoon</h1>
           <div className="linkContainer">
@@ -145,6 +194,16 @@ function Header() {
           </div>
         </div>
       </ProfileContainer>
+      
+      <ModalOverlay $isOpen={isModalOpen} onClick={handleModalClose}>
+        <ModalImage 
+          src={ProfileImg} 
+          alt="profileImg" 
+          $isOpen={isModalOpen}
+          $ismobile={isMobile}
+          onClick={(e) => e.stopPropagation()}
+        />
+      </ModalOverlay>
     </HeaderContainer>
   );
 }
