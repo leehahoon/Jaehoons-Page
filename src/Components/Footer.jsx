@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.footer`
   padding: ${(props) => (props.$ismobile ? "40px 15px" : "60px 10%")};
-  background: #ffffff;
+  background: ${(props) => (props.$ismobile ? "#f8fafc" : "#ffffff")};
   position: relative;
   width: 100%;
   
@@ -109,9 +109,9 @@ function Footer() {
         </div>
         <div className="copyrightContainer">
           {isMobile ? (
-            <span>ⓒ 2024 Jieun. All rights reserved.</span>
+            <span>ⓒ 2023 Jieun. All rights reserved.</span>
           ) : (
-            <span>Copyright 2024. Jieun. All rights reserved.</span>
+            <span>Copyright 2023. Jieun. All rights reserved.</span>
           )}
         </div>
       </div>

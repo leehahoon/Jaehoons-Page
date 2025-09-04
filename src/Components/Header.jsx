@@ -8,10 +8,10 @@ import { useMediaQuery } from "react-responsive";
 const HeaderContainer = styled.header`
   width: 100%;
   height: ${(props) => (props.$ismobile ? "120px" : "160px")};
-  margin-bottom: ${(props) => (props.$ismobile ? "20px" : "40px")};
+  margin-bottom: ${(props) => (props.$ismobile ? "0" : "40px")};
   padding: ${(props) => (props.$ismobile ? "0 15px" : "0 5%")};
   background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: ${(props) => (props.$ismobile ? "none" : "1px solid #e2e8f0")};
   display: flex;
   align-items: center;
   position: relative;
