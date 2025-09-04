@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.footer`
-  padding: ${(props) => (props.$ismobile ? "40px 15px" : "60px 10%")};
+  padding: ${(props) => (props.$ismobile ? "40px 15px" : "60px 56px")};
   background: ${(props) => (props.$ismobile ? "#f8fafc" : "#ffffff")};
   position: relative;
   width: 100%;
