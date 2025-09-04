@@ -11,7 +11,6 @@ const AppContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  overflow-x: hidden;
 `;
 
 function App() {

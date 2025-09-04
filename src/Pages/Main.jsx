@@ -18,7 +18,6 @@ const MainContainer = styled.main`
   max-width: 1800px;
   background: #f8fafc;
   padding-bottom: ${(props) => (props.$ismobile ? "0" : "100px")};
-  overflow-x: hidden;
 `;
 
 const ContentsContainer = styled.div`
@@ -28,7 +27,6 @@ const ContentsContainer = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
   gap: ${(props) => (props.$ismobile ? "0" : "40px")};
-  overflow-x: hidden;
 `;
 
 const Contents = styled.div`
@@ -36,7 +34,6 @@ const Contents = styled.div`
   background: #ffffff;
   border-radius: ${(props) => (props.$ismobile ? "0" : "12px")};
   padding: ${(props) => (props.$ismobile ? "0" : "32px")};
-  overflow-x: hidden;
   word-break: break-word;
   box-shadow: ${(props) => (props.$ismobile ? "none" : "0 1px 3px rgba(0, 0, 0, 0.1)")};
   border: ${(props) => (props.$ismobile ? "none" : "1px solid #e2e8f0")};
