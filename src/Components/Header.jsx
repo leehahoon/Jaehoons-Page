@@ -4,7 +4,7 @@ import TstoryLogo from "../Image/tstory_logo.png";
 import GithubLogo from "../Image/github.png";
 import FacebookLogo from "../Image/facebook.png";
 import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -160,6 +160,29 @@ function Header() {
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && isModalOpen) {
+        setIsModalOpen(false);
+      }
+    };
+
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+      // 모달이 열렸을 때 body 스크롤 방지
+      document.body.style.overflow = 'hidden';
+    } else {
+      // 모달이 닫혔을 때 body 스크롤 복원
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      // 컴포넌트 언마운트 시 스크롤 복원
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
 
   return (
     <HeaderContainer $ismobile={isMobile}>
