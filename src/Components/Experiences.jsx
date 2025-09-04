@@ -2,8 +2,11 @@ import { styled } from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
 const ExperiencesContainer = styled.section`
-  padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: 80px;
+  padding: ${(props) => (props.$ismobile ? "20px 15px" : "32px 10%")};
+  margin-bottom: 60px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow-x: hidden;
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -14,12 +17,22 @@ const ExperiencesContainer = styled.section`
   font-family: "Pretendard-Regular";
 
   .title {
-    border-bottom: 1px solid rgb(236, 236, 235);
-    padding-bottom: 10px;
-    width: 100%;
-    font-size: 1.5rem;
-    font-family: "Noto Serif KR", serif;
-    margin-bottom: ${(props) => (props.$ismobile ? "10px" : "20px")};
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 24px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: #3b82f6;
+      border-radius: 1px;
+    }
   }
 
   .heightBox {
@@ -31,28 +44,54 @@ const ExperiencesContainer = styled.section`
 
   .listContainer {
     display: flex;
-    font-size: ${(props) => (props.$ismobile ? "1rem" : "1.2rem")};
+    padding: ${(props) => (props.$ismobile ? "16px" : "20px")};
+    background: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+    flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
+    gap: ${(props) => (props.$ismobile ? "12px" : "0")};
 
-    .period {
-      margin-right: ${(props) => (props.$ismobile ? "10px" : "20px")};
-      width: 10%;
-      min-width: ${(props) => (props.$ismobile ? "80px" : "100px")};
-      display: flex;
+    &:hover {
+      background: #f1f5f9;
+      transform: ${(props) => (props.$ismobile ? "none" : "translateX(2px)")};
     }
 
-    .experiencesContainer {
+    .period {
+      margin-right: ${(props) => (props.$ismobile ? "0" : "20px")};
+      min-width: ${(props) => (props.$ismobile ? "auto" : "120px")};
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 2px;
+    }
+
+    .contentsContainer {
       display: flex;
       flex-direction: column;
       width: 100%;
 
       .experiencesTitle {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        
+        b {
+          font-size: 1.1rem;
+             color: #475569;
+          font-weight: 600;
+        }
       }
 
-      .educationContents {
+      .experiencesContents {
         .contents {
-          margin-bottom: 2px;
-          word-break: keep-all;
+          margin-bottom: 4px;
+          word-break: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
+          color: #475569;
+          font-size: 1rem;
+          line-height: 26px;
         }
       }
     }

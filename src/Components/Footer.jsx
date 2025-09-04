@@ -2,15 +2,12 @@ import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.footer`
-  height: ${(props) => (props.$ismobile ? "120px" : "150px")};
-  padding: ${(props) => (props.$ismobile ? "0" : "30px 0")};
-  background-color: rgb(246, 246, 246);
-  font-size: ${(props) => (props.$ismobile ? "0.8rem" : "")};
+  padding: ${(props) => (props.$ismobile ? "40px 15px" : "60px 10%")};
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
   position: relative;
   width: 100%;
-  left: 0;
-  display: flex;
-  align-items: ${(props) => (props.$ismobile ? "end" : "center")};
+  
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -19,32 +16,58 @@ const FooterContainer = styled.footer`
     font-style: normal;
   }
   font-family: "Pretendard-Regular";
-  /* margin-top: ${(props) => (props.$ismobile ? "30px" : "")}; */
+
+  .footerContent {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
+    justify-content: space-between;
+    align-items: ${(props) => (props.$ismobile ? "flex-start" : "flex-end")};
+    gap: ${(props) => (props.$ismobile ? "20px" : "40px")};
+  }
 
   .linkContainer {
-    margin-left: ${(props) => (props.$ismobile ? "10px" : "30px")};
-    margin-bottom: ${(props) => (props.$ismobile ? "10px" : "")};
-    flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
-    color: #7d7d7d;
     display: flex;
-    height: ${(props) => (props.$ismobile ? "80px" : "100px")};
     flex-direction: column;
-    justify-content: space-around;
-    a {
-      color: #7d7d7d;
-      text-decoration: none;
-    }
-
-    .info {
-      margin-left: 20px;
+    gap: 12px;
+    
+    .infoContainer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: #475569;
+      
+      .label {
+        font-weight: 600;
+        color: #1e293b;
+        min-width: 60px;
+      }
+      
+      .info {
+        color: #64748b;
+        text-decoration: none;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        transition: all 0.2s ease;
+        
+        &:hover {
+          color: #3b82f6;
+          background: #e0f2fe;
+          border-color: #3b82f6;
+          transform: translateY(-1px);
+        }
+      }
     }
   }
 
   .copyrightContainer {
-    color: #7d7d7d;
-    position: absolute;
-    bottom: ${(props) => (props.$ismobile ? "10px" : "30px")};
-    right: ${(props) => (props.$ismobile ? "10px" : "30px")};
+    color: #64748b;
+    font-size: 0.9rem;
+    text-align: ${(props) => (props.$ismobile ? "left" : "right")};
   }
 `;
 
@@ -54,38 +77,44 @@ function Footer() {
   });
   return (
     <FooterContainer $ismobile={isMobile}>
-      <div className="linkContainer">
-        <div className="infoContainer">
-          E-mail
-          <span className="info">leehahoon1001@gmail.com</span>
+      <div className="footerContent">
+        <div className="linkContainer">
+          <div className="infoContainer">
+            <span className="label">E-mail</span>
+            <a href="mailto:leehahoon1001@gmail.com" className="info">
+              leehahoon1001@gmail.com
+            </a>
+          </div>
+          <div className="infoContainer">
+            <span className="label">GitHub</span>
+            <a
+              className="info"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/leehahoon"
+            >
+              github.com/leehahoon
+            </a>
+          </div>
+          <div className="infoContainer">
+            <span className="label">Blog</span>
+            <a
+              className="info"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://leehahoon.tistory.com"
+            >
+              leehahoon.tistory.com
+            </a>
+          </div>
         </div>
-        <div className="infoContainer">
-          GitHub
-          <a
-            className="link info"
-            target="_blank"
-            href="https://github.com/leehahoon"
-          >
-            https://github.com/leehahoon
-          </a>
+        <div className="copyrightContainer">
+          {isMobile ? (
+            <span>ⓒ 2024 Jieun. All rights reserved.</span>
+          ) : (
+            <span>Copyright 2024. Jieun. All rights reserved.</span>
+          )}
         </div>
-        <div className="infoContainer">
-          Blog
-          <a
-            className="link info"
-            target="_blank"
-            href="https://leehahoon.tistory.com"
-          >
-            https://leehahoon.tistory.com
-          </a>
-        </div>
-      </div>
-      <div className="copyrightContainer">
-        {isMobile ? (
-          <span>ⓒ Jieun.</span>
-        ) : (
-          <span>Copyright 2023. Jieun. All rights reserved.</span>
-        )}
       </div>
     </FooterContainer>
   );

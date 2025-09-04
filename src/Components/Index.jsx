@@ -1,18 +1,19 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 
 const IndexContainer = styled.nav`
-
-  height: 420px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 260px;
-  position: ${props => props.$isFixed ? 'fixed' : 'sticky'};
-  top: ${props => props.$isFixed ? '30px' : '30px'};
-  left: ${props => props.$isFixed ? '5%' : 'auto'};
-  border-left: 2px solid #5d5d5d;
-  padding-left: 30px;
+  width: 220px;
+  position: sticky;
+  top: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  // border: 1px solid #e2e8f0;
+  z-index: 10;
 
   @font-face {
     font-family: "Pretendard-Regular";
@@ -25,30 +26,54 @@ const IndexContainer = styled.nav`
 
   .title {
     font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
     margin-bottom: 20px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: #3b82f6;
+      border-radius: 1px;
+    }
   }
 
   .listContainer {
-    height: 340px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     list-style: none;
     padding: 0;
+    gap: 4px;
 
     .list {
-      font-size: 1.3rem;
+      font-size: 1rem;
       cursor: pointer;
+      color: #64748b;
+      padding: 10px 12px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &:hover {
-        text-decoration: underline;
+        background: #f8fafc;
+        color: #3b82f6;
+        transform: translateX(2px);
       }
     }
   }
 `;
 
 function Index({
-  topRef,
   aboutMeRef,
   educationRef,
   experiencesRef,
@@ -57,25 +82,7 @@ function Index({
   awardsRef,
   bugBountyRef,
   publicationsRef,
-  onIndexFixedChange,
 }) {
-  const [isFixed, setIsFixed] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY >= 160) {
-        setIsFixed(true);
-        onIndexFixedChange(true);
-      } else {
-        setIsFixed(false);
-        onIndexFixedChange(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [onIndexFixedChange]);
 
   function scrollMove(element) {
     if (element.current) {
@@ -84,7 +91,6 @@ function Index({
   }
 
   const indexValue = [
-    { id: 0, value: topRef, text: "Top" },
     { id: 1, value: aboutMeRef, text: "About Me" },
     { id: 2, value: educationRef, text: "Education" },
     { id: 3, value: publicationsRef, text: "Publications" },
@@ -95,7 +101,7 @@ function Index({
     { id: 8, value: bugBountyRef, text: "Bug Bounty" },
   ];
   return (
-    <IndexContainer $isFixed={isFixed}>
+    <IndexContainer>
       <span className="title">INDEX</span>
       <ul className="listContainer">
         {indexValue.map((el) => {

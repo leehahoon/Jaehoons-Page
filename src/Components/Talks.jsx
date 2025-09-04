@@ -2,8 +2,12 @@ import { styled } from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
 const TalksContainer = styled.section`
-  padding: ${(props) => (props.$ismobile ? "0 15px" : "0 10%")};
-  margin-bottom: 80px;
+  padding: ${(props) => (props.$ismobile ? "20px 15px" : "32px 10%")};
+  margin-bottom: 60px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow-x: hidden;
+  
   @font-face {
     font-family: "Pretendard-Regular";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -14,12 +18,22 @@ const TalksContainer = styled.section`
   font-family: "Pretendard-Regular";
 
   .title {
-    border-bottom: 1px solid rgb(236, 236, 235);
-    padding-bottom: 10px;
-    width: 100%;
-    font-size: 1.5rem;
-    font-family: "Noto Serif KR", serif;
-    margin-bottom: ${(props) => (props.$ismobile ? "10px" : "20px")};
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 24px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: #3b82f6;
+      border-radius: 1px;
+    }
   }
 
   .heightBox {
@@ -31,13 +45,28 @@ const TalksContainer = styled.section`
 
   .listContainer {
     display: flex;
-    font-size: ${(props) => (props.$ismobile ? "1rem" : "1.2rem")};
+    padding: ${(props) => (props.$ismobile ? "16px" : "20px")};
+    background: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+    flex-direction: ${(props) => (props.$ismobile ? "column" : "row")};
+    gap: ${(props) => (props.$ismobile ? "12px" : "0")};
+
+    &:hover {
+      background: #f1f5f9;
+      transform: ${(props) => (props.$ismobile ? "none" : "translateX(2px)")};
+    }
 
     .period {
-      margin-right: ${(props) => (props.$ismobile ? "10px" : "20px")};
-      width: 10%;
-      min-width: ${(props) => (props.$ismobile ? "80px" : "100px")};
+      margin-right: ${(props) => (props.$ismobile ? "0" : "20px")};
+      min-width: ${(props) => (props.$ismobile ? "auto" : "120px")};
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
       display: flex;
+      align-items: flex-start;
+      padding-top: 2px;
     }
 
     .contentsContainer {
@@ -46,23 +75,44 @@ const TalksContainer = styled.section`
       width: 100%;
 
       .talksTitle {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        color: #475569;
+        font-weight: 600;
       }
 
       .talksContents {
         list-style-type: none;
         padding: 0;
         .contents {
-          margin-bottom: 2px;
-          word-break: keep-all;
+          margin-bottom: 4px;
+          word-break: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
+          color: #475569;
+          font-size: 1rem;
+          line-height: 26px;
         }
         .link {
           text-decoration: none;
-          color: black;
+          color: #475569;
 
           .linkText {
-            color: black;
-            text-decoration-line: underline;
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+            
+            &:hover {
+              color: #3b82f6;
+              background: #e0f2fe;
+              border-color: #3b82f6;
+              transform: translateY(-1px);
+            }
           }
         }
       }
@@ -118,18 +168,18 @@ function Talks() {
               <div className="period">{el.period}</div>
               <div className="contentsContainer">
                 <div className="talksTitle">
-                  <b>{el.title}</b>
+                  {el.title}
                 </div>
                 <ul className="talksContents">
                   {el.contents.map((el, i) => {
                     return index === 0 && i === 1 ? (
                       <a target="blank_" key={i} className="link" href={el}>
-                        - <span className="linkText">[ YouTube Link ]</span>
+                        - <span className="linkText">YouTube Link </span>
                       </a>
                     ) : index === 1 && i === 1 ? (
                       <a target="blank_" key={i} className="link" href={el}>
                         -{" "}
-                        <span className="linkText">[ Link ]</span>
+                        <span className="linkText">Link </span>
                       </a>
                     ) : (
                       <li className="contents" key={i}>

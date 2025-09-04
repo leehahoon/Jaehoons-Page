@@ -9,24 +9,34 @@ import Talks from "../Components/Talks";
 import Awards from "../Components/Awards";
 import BugBounty from "../Components/BugBounty";
 import Publications from "../Components/Publication";
+import ScrollToTop from "../Components/ScrollToTop";
 import { useMediaQuery } from "react-responsive";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const MainContainer = styled.main`
   width: 100%;
-  max-width: 1440px;
-  overflow-x: hidden;
+  max-width: 1800px;
+  background: #f8fafc;
+  padding-bottom: 100px;
 `;
 
 const ContentsContainer = styled.div`
   width: 100%;
   padding: ${(props) => (props.$ismobile ? "0" : "0 5%")};
   display: flex;
+  gap: 40px;
 `;
 
 const Contents = styled.div`
-  width: 100%;
-  padding-left: ${props => props.$isIndexFixed ? '210px' : '0'};
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: ${(props) => (props.$ismobile ? "20px" : "32px")};
+  overflow-x: hidden;
+  word-break: break-word;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow-wrap: break-word;
 `;
 
 function Main() {
@@ -34,7 +44,6 @@ function Main() {
     query: "(max-width:767px)",
   });
 
-  const [isIndexFixed, setIsIndexFixed] = useState(false);
 
   const topRef = useRef(null);
   const aboutMeRef = useRef(null);
@@ -55,7 +64,6 @@ function Main() {
           " "
         ) : (
           <Index
-            topRef={topRef}
             aboutMeRef={aboutMeRef}
             educationRef={educationRef}
             experiencesRef={experiencesRef}
@@ -64,10 +72,9 @@ function Main() {
             awardsRef={awardsRef}
             bugBountyRef={bugBountyRef}
             publicationsRef={publicationsRef}
-            onIndexFixedChange={setIsIndexFixed}
           />
         )}
-        <Contents $isIndexFixed={isIndexFixed}>
+        <Contents $ismobile={isMobile}>
           <div ref={aboutMeRef} />
           <AboutMe />
           <div ref={educationRef} />
@@ -86,6 +93,7 @@ function Main() {
           <BugBounty />
         </Contents>
       </ContentsContainer>
+      <ScrollToTop />
     </MainContainer>
   );
 }
