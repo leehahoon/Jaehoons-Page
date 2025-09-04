@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ProfileImg from "../Image/profileImg.png";
 import TstoryLogo from "../Image/tstory_logo.png";
 import GithubLogo from "../Image/github.png";
-import FacebookLogo from "../Image/facebook.png";
+import TwitterLogo from "../Image/twitter.png";
 import { useMediaQuery } from "react-responsive";
 import { useState, useEffect } from "react";
 
@@ -70,6 +70,7 @@ const ProfileContainer = styled.div`
     .linkContainer {
       display: flex;
       align-items: center;
+      margin-right: 60px;
       width: ${(props) => (props.$ismobile ? "100%" : "60%")};
       justify-content: ${(props) => (props.$ismobile ? "flex-start" : "flex-end")};
       position: ${(props) => (props.$ismobile ? "static" : "absolute")};
@@ -208,10 +209,10 @@ function Header() {
                 Blog
               </div>
             </a>
-            <a target="_blank" href="https://facebook.com/leehahoon1001g">
-              <div className="facebook link">
-                <img src={FacebookLogo} className="icon" alt="GithubLogo" />
-                Facebook
+            <a target="_blank" href="https://x.com/leehahoon1001">
+              <div className="twitter link">
+                <img src={TwitterLogo} className="icon" alt="twitterLogo" />
+                Twitter
               </div>
             </a>
           </div>
