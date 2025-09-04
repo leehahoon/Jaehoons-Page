@@ -75,7 +75,7 @@ const ProfileContainer = styled.div`
       justify-content: ${(props) => (props.$ismobile ? "flex-start" : "flex-end")};
       position: ${(props) => (props.$ismobile ? "static" : "absolute")};
       right: ${(props) => (props.$ismobile ? "auto" : "0")};
-      bottom: ${(props) => (props.$ismobile ? "auto" : "10px")};
+      bottom: ${(props) => (props.$ismobile ? "auto" : "20px")};
       gap: ${(props) => (props.$ismobile ? "8px" : "0")};
 
       a {
