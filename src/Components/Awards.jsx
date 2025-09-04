@@ -142,7 +142,7 @@ function Awards() {
       period: "2023",
       title: "Hack the DRONE",
       contents: [
-        "• 5th Prize",
+        "5th Prize",
       ],
     },
     {
@@ -150,7 +150,7 @@ function Awards() {
       period: "2023",
       title: "SSUCTF",
       contents: [
-        "• 2nd Prize",
+        "2nd Prize",
       ],
     },
     {
@@ -158,7 +158,7 @@ function Awards() {
       period: "2022",
       title: "HackingZone X-MAS Capture The Bug",
       contents: [
-        "• 2nd Prize",
+        "2nd Prize",
       ],
     },
     {
@@ -166,7 +166,7 @@ function Awards() {
       period: "2021",
       title: "Metasploit Community CTF",
       contents: [
-        "• 4th Prize",
+        "4th Prize",
       ],
     },
     {
@@ -174,7 +174,7 @@ function Awards() {
       period: "2021",
       title: "Soongsil Software Contest",
       contents: [
-        "• 3rd Prize",
+        "3rd Prize",
       ],
     },
     {
@@ -182,7 +182,7 @@ function Awards() {
       period: "2021",
       title: "Hack The GRU",
       contents: [
-        "• 2nd Prize",
+        "2nd Prize",
       ],
     },
     {
@@ -190,7 +190,7 @@ function Awards() {
       period: "2016",
       title: "WhiteHat Contest, Ministry of Defense",
       contents: [
-        "• 2nd Prize",
+        "2nd Prize",
       ],
     },
     {
@@ -198,7 +198,7 @@ function Awards() {
       period: "2016",
       title: "KISA Development & Security Competition",
       contents: [
-        "• 2nd Prize",
+        "2nd Prize",
       ],
     },
   ];
