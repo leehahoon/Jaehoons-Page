@@ -138,6 +138,17 @@ function BugBounty() {
 
   /** 연도별 데이터 구조 */
   const bugBountyByYear = {
+    2025: [
+      {
+        title: "Automatic bug detection with Static Analysis & Fuzzing",
+        contents: [
+          "• Developed a static analyzer and a directed fuzzer",
+          "• Found 15 vulnerabilities in open-source projects, with 10 assigned as CVEs",
+          "• CVE-2024-54888, CVE-2024-54889, CVE-2024-54890, CVE-2024-54891, CVE-2024-54892",
+          "• CVE-2024-54893, CVE-2024-54894, CVE-2024-54895, CVE-2025-55477, CVE-2025-55478",
+        ],
+      },
+    ],
     2023: [
       {
         title: "Synology Product Security Advisory",
@@ -150,7 +161,8 @@ function BugBounty() {
       {
         title: "KVE",
         contents: [
-          "• KVE-2023-0147, KVE-2023-0148, KVE-2023-0251, KVE-2023-5047, KVE-2023-5048",
+          "• Report router vulnerabilities to KISA",
+          "• KVE-2023-0147, KVE-2023-0148, KVE-2023-0251, KVE-2023-5047, KVE-2023-5048, KVE-2023-5056, KVE-2023-5061",
         ],
       },
     ],
@@ -165,6 +177,7 @@ function BugBounty() {
       {
         title: "KVE",
         contents: [
+          "• Report router and software vulnerabilities to KISA",
           "• KVE-2022-0745, KVE-2022-1899, KVE-2022-1901, KVE-2022-1930",
         ],
       },
@@ -180,6 +193,7 @@ function BugBounty() {
       {
         title: "KVE",
         contents: [
+          "• Report software vulnerabilities to KISA",
           "• KVE-2021-1130, KVE-2021-1167, KVE-2021-1168",
         ],
       },
@@ -190,7 +204,7 @@ function BugBounty() {
 
   return (
     <Wrap $ismobile={isMobile}>
-      <div className="title">BUG BOUNTY</div>
+      <div className="title">BUG REPORT</div>
       <ul className="heightBox">
         {years.map((year) => (
           <li key={year} className="listContainer">
